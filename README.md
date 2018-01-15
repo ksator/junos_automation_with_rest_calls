@@ -16,7 +16,7 @@
 
 # What to find in this repository
 
-REST calls examples for Juniper solutions.
+This repository has basic REST calls examples for Juniper solutions.
 
 # How to get locally the content of the remote repository
 
