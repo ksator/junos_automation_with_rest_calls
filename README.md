@@ -119,7 +119,7 @@ python junos/get_software_information_in_json.py
 
 
 # JUNOS SPACE
-The python scripts [junos_space.py](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space.  
+The python scripts [**junos_space.py**](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space.  
 ```
 python junos_space/junos_space.py
 ```
