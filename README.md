@@ -115,8 +115,15 @@ python junos/get_software_information_in_xml.py
 python junos/get_software_information_in_json.py
 ```
 
+[**get_configuration_with_filter.py**](junos/get_configuration_with_filter.py) script retrieves and print a subset of the Junos configuration from an MX router with a REST API call. It uses a filter to retrieves only a subset of the Junos configuration 
+```
+python junos/get_configuration_with_filter.py
+```
+
 
 # JUNOS SPACE
+
+We can use Python librairies to make REST calls. I am using the library requests.  
 The python scripts [**junos_space.py**](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space.  
 ```
 python junos_space/junos_space.py
