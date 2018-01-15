@@ -1,7 +1,9 @@
 # Repository documentation structure
 
 - [**What to find in this repository**](README.md#what-to-find-in-this-repository)
-- [**How to get locally the content of the remote repository**](README.md#How-to-get-locally-the-content-of-the-remote-repository)
+- [**How to get locally the content of the remote repository**](README.md#what-to-find-in-this-repository)
+- [**JUNOS**](README.md#junos)
+- [**JUNOS SPACE**](README.md#junos-space)
 
 # What to find in this repository
 
@@ -85,4 +87,4 @@ The output is ip addresses of all EX4300-48T from junos space:
 ```
 172.30.108.138
 172.30.108.134
-'''
+```
