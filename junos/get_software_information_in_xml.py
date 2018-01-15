@@ -1,4 +1,8 @@
-# Retrieve and print software information in xml representation from an vMX router with a REST API call 
+"""
+DESCRIPTION: retrieve and print the software information in a xml representation  from an vMX router with a REST API call. 
+The rpc get-software-information is the equivalent of 'show version'
+USAGE: python junos/get_software_information_in_xml.py
+"""
 
 import requests
 from requests.auth import HTTPBasicAuth
