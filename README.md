@@ -100,7 +100,8 @@ Here's how to use the Junos REST API explorer to make a REST call to read Junos 
 
 
 Here's how to use the Junos REST API explorer to make a REST call with filters to read Junos data. The default port is 3000, but I am using 8080 in this example.     
-![rest call with filter](rest_call_with_filter.png)
+![rest call with filter](explorer/rest call with filter.png)
+
 
 
 ### curl
