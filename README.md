@@ -38,8 +38,7 @@ Graphical REST clients are for humans, so if you need automation and programmati
 
 We can use Python librairies to make REST calls. I am using the library requests.  
 
-Example:  
-google map has a public API (read only). The python script [**google_map_api.py**](google_map_api.py) prompts you for an address, and then uses the google map API to get data for that address, and print its latitude and longitude. Run this command to use it:  
+Example: google map has a public API (read only). The python script [**google_map_api.py**](google_map_api.py) prompts you for an address, and then uses the google map API to get data for that address, and print its latitude and longitude. Run this command to use it:  
 ```
 python google_map_api.py
 ```
