@@ -116,6 +116,10 @@ Run this command to retrieve and print the software information in a json repres
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/json"
 ```
+Run this command to retrieve a subset of the junos configuration in a XML representation from an vMX router with a REST API call with a filter. 
+```
+curl http://172.30.52.152:8080/rpc/ -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml" -d "<get-config><source><running/></source><filter type="subtree"><configuration><interfaces><interface><name>ge-0/0/0</name></interface></interfaces></configuration></filter></get-config> "
+```
 
 ### Python 
 
