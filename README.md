@@ -117,11 +117,11 @@ set system services rest enable-explorer
 
 ### How to use the Junos REST API explorer
 
-Here's how to use the Junos REST API explorer to make a REST call to get Junos data in XML. The default port is 3000, but I am using 8080 in this example.     
+Here's how to use the Junos REST API explorer to make a REST call to get Junos data in XML. This example uses an HTTP GET. There is no argument in the RPC. The default port is 3000, but I am using 8080 in this example.     
 ![rest call get software information.png](explorer/rest_call_get-software-information.png)  
 
 
-Here's how to use the Junos REST API explorer to make a REST call with filters to get Junos data. The default port is 3000, but I am using 8080 in this example.     
+Here's how to use the Junos REST API explorer to make a REST call with filters to get Junos data. This example uses an HTTP POST. The default port is 3000, but I am using 8080 in this example.     
 ![rest_call_with_filter.png](explorer/rest_call_with_filter.png)
 
 
