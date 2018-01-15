@@ -207,7 +207,7 @@ python junos/get_configuration_with_filter.py
 ```
 python junos/configure.py
 ```
-[**audit_bgp.p**](junos/audit_bgp.py) script audits a list of devices using a REST API call. It uses the HTTP method GET to retrieve some BGP details in JSON. It then parses the output and shows the peers state.
+[**audit_bgp.py**](junos/audit_bgp.py) script audits a list of devices using a REST API call. It uses the HTTP method GET to retrieve some BGP details in JSON. It then parses the output and shows the peers state.
 ```
 usage: python junos/audit_bgp.py
 ```
