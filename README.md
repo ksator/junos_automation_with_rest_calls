@@ -130,17 +130,17 @@ Here's how to use the Junos REST API explorer to make a REST call with filters t
 
 curl is an open source command line tool for transferring data.  
 
-Run this command to retrieve and print the software information in a XML representation from an vMX router with a REST call. The rpc ```get-software-information``` is the equivalent of ```show version```
+Run this command to retrieve and print the software information in a XML representation from an vMX router with a REST call. It's an HTTP GET. The rpc ```get-software-information``` is the equivalent of ```show version```. 
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml"
 ```
 
-Run this command to retrieve and print the software information in a JSON representation from an vMX router with a REST call. The rpc ```get-software-information``` is the equivalent of ```show version```
+Run this command to retrieve and print the software information in a JSON representation from an vMX router with a REST call. It's an HTTP GET. The rpc ```get-software-information``` is the equivalent of ```show version```
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/json"
 ```
 
-Run this command to retrieve a subset of the junos configuration in a XML representation from an vMX router with a REST call with a filter. 
+Run this command to retrieve a subset of the junos configuration in a XML representation from an vMX router with a REST call with a filter. It's the equivalent of ```show configuration interfaces interface ge-0/0/0```.  It's an HTTP POST. 
 ```
 curl http://172.30.52.152:8080/rpc/ -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml" -d "<get-config><source><running/></source><filter type="subtree"><configuration><interfaces><interface><name>ge-0/0/0</name></interface></interfaces></configuration></filter></get-config> "
 ```
