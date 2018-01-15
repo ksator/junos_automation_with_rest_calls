@@ -20,10 +20,11 @@ You can now use the local copy of this remote repository.
 
 
 # JUNOS
-### JUNOS REST API guide
+
+### Junos REST API guide
 https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/rest-api/rest-api.pdf 
 
-## RPC
+### RPC
 
 Each junos show command has an equivalent rpc.   
 To get the equivalent rpc of a Junos show command, add ```| display xml rpc``` at the end of the show command.  
@@ -74,6 +75,30 @@ pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path
         </cli>
     </rpc-reply>
 ```
+
+### Enable REST API on Junos
+
+Run these commands to enable REST API on Junos.  
+The default port is 3000.  
+The below commands enable also a graphical REST API Explorer that allow to conveniently experiment with REST APIs.   
+
+```
+lab@dc-vmx-3# show | compare
+[edit system services]
++    rest {
++        http;
++        enable-explorer;
++    }
+
+[edit]
+lab@dc-vmx-3# commit
+commit complete
+
+[edit]
+lab@dc-vmx-3#
+```
+
+
 
 # JUNOS SPACE
 The python scripts [junos_space.py](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space
