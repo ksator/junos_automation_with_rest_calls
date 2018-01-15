@@ -1,5 +1,5 @@
 # This python scripts extract and print the ip addresses of all EX4300-48T from junos space
-# usage: junos_space.py
+# usage: python junos_space/junos_space.py
 
 from pprint import pprint as pp
 from requests import get
