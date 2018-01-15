@@ -29,7 +29,7 @@ You can now use the local copy of this remote repository.
 # JUNOS
 
 ### Junos REST API guide
-https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/rest-api/rest-api.pdf 
+it is located [**here**](https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/rest-api/rest-api.pdf) 
 
 ### How to get the equivalent RPC of a Junos show command?
 
