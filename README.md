@@ -7,10 +7,10 @@
 - [**JUNOS REST API**](README.md#junos-rest-api)
     - [**junos rest api guide**](README.md#junos-rest-api-guide)
     - [**how to get the equivalent rpc of a junos show command**](README.md#how-to-get-the-equivalent-rpc-of-a-junos-show-command)
-    - [**enable rest api on junos**](README.md#how-to-enable-rest-api-on-junos)
-    - [**junos rest api explorer**](README.md#how-to-use-the-junos-rest-api-explorer)
-    - [**curl**](README.md#how-to-make-rest-calls-with-curl)
-    - [**python**](README.md#how-to-make-rest-calls-with-python)
+    - [**how to enable rest api on junos**](README.md#how-to-enable-rest-api-on-junos)
+    - [**how to use junos rest api explorer**](README.md#how-to-use-the-junos-rest-api-explorer)
+    - [**how to make rest calls with curl**](README.md#how-to-make-rest-calls-with-curl)
+    - [**how to make rest calls with python**](README.md#how-to-make-rest-calls-with-python)
 - [**JUNOS SPACE REST API**](README.md#junos-space-rest-api)
 - [**Looking for more Junos automation solutions**](README.md#looking-for-more-junos-automation-solutions)
 
@@ -44,7 +44,7 @@ google map has a public API (read only). The python script [**google_map_api.py*
 python google_map_api.py
 ```
 
-# JUNOS
+# JUNOS REST API
 
 You can use HTTP get and post methods to submit RPCs to the REST Server.  
 You can retrieve data in XML or JSON.  
