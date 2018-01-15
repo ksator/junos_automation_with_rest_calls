@@ -130,17 +130,17 @@ Here's how to use the Junos REST API explorer to make a REST call with filters t
 
 curl is an open source command line tool for transferring data.  
 
-Run this command to retrieve and print the software information in a XML representation from an vMX router with a REST API call. The rpc ```get-software-information``` is the equivalent of ```show version```
+Run this command to retrieve and print the software information in a XML representation from an vMX router with a REST call. The rpc ```get-software-information``` is the equivalent of ```show version```
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml"
 ```
 
-Run this command to retrieve and print the software information in a JSON representation from an vMX router with a REST API call. The rpc ```get-software-information``` is the equivalent of ```show version```
+Run this command to retrieve and print the software information in a JSON representation from an vMX router with a REST call. The rpc ```get-software-information``` is the equivalent of ```show version```
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/json"
 ```
 
-Run this command to retrieve a subset of the junos configuration in a XML representation from an vMX router with a REST API call with a filter. 
+Run this command to retrieve a subset of the junos configuration in a XML representation from an vMX router with a REST call with a filter. 
 ```
 curl http://172.30.52.152:8080/rpc/ -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml" -d "<get-config><source><running/></source><filter type="subtree"><configuration><interfaces><interface><name>ge-0/0/0</name></interface></interfaces></configuration></filter></get-config> "
 ```
@@ -149,12 +149,12 @@ curl http://172.30.52.152:8080/rpc/ -u "lab:m0naco" -H "Content-Type: applicatio
 
 We can use Python librairies to make REST calls. I am using the library requests.  
 
-[**get_software_information_in_xml.py**](junos/get_software_information_in_xml.py) retrieves and print the software information in a XML representation from an vMX router with a REST API call. 
+[**get_software_information_in_xml.py**](junos/get_software_information_in_xml.py) retrieves and print the software information in a XML representation from an vMX router with a REST call. It uses the HTTP method GET. 
 ```
 python junos/get_software_information_in_xml.py
 ```
 
-[**get_software_information_in_json.py**](junos/get_software_information_in_json.py) script retrieves in a JSON representation the software information from an MX router with a REST API call. The response is parsed and some details are printed. 
+[**get_software_information_in_json.py**](junos/get_software_information_in_json.py) script retrieves in a JSON representation the software information from an MX router with a REST API call. It uses the HTTP method GET. The response is parsed and some details are printed. 
 ```
 python junos/get_software_information_in_json.py
 ```
