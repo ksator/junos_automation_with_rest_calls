@@ -3,6 +3,8 @@ https://www.juniper.net/documentation/en_US/junos/information-products/pathway-p
 
 ### how to get the equivalent rpc of a Junos show command
 
+Each junos show command has an equivalent rpc.  
+
 To get the equivalent rpc of ```show version```:
 
 ```
@@ -34,7 +36,6 @@ pytraining@mx80-17> show chassis hardware clei-models | display xml rpc
         <banner></banner>
     </cli>
 </rpc-reply>
-pytraining@mx80-17> 
 ```
 
 To get the equivalent rpc for ```show route receive-protocol bgp 192.168.10.4 active-path hidden```
@@ -53,9 +54,4 @@ pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path
             <banner>{master:0}</banner>
         </cli>
     </rpc-reply>
-
-{master:0}
-pytraining@newhostname> exit 
-
-Connection to 172.30.179.107 closed.
 ```
