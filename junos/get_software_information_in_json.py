@@ -2,7 +2,7 @@
 DESCRIPTION: retrieve in a json representation the software information from an MX router with a REST API call. 
 the output is parsed and some details are printed
 the rpc get-software-information is the equivalent of 'show version'
-USAGE: python junos/get_mx_software_information_in_json.py
+USAGE: python junos/get_software_information_in_json.py
 """
 
 import requests
