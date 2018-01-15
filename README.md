@@ -2,6 +2,7 @@
 
 - [**What to find in this repository**](README.md#what-to-find-in-this-repository)
 - [**How to get locally the content of the remote repository**](README.md#what-to-find-in-this-repository)
+- [**About REST API**](README.md#about-rest-api)
 - [**REST calls with Python**](README.md#rest-calls-with-python)
 - [**JUNOS**](README.md#junos)
     - [**junos rest api guide**](README.md#junos-rest-api-guide)
@@ -26,7 +27,7 @@ cd rest_calls_to_juniper/
 ```
 You can now use the local copy of this remote repository.  
 
-# About REST APIs
+# About REST API
 
 Junos, Junos space, Contrail, Northstar, ... have REST API.  
 You fisrt need to get the REST API documentation for your system.   
