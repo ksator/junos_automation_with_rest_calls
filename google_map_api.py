@@ -1,7 +1,14 @@
 #!/usr/bin/env python
 
-# google map url is https://www.google.co.uk/maps/place/41+Rue+de+Villiers,+92200+Neuilly-sur-Seine,+France
-# google map api is http://maps.googleapis.com/maps/api/geocode/json?address=41 rue de villiers neuilly sur seine 
+"""
+google map url is https://www.google.co.uk/maps/place/41+Rue+de+Villiers,+92200+Neuilly-sur-Seine,+France
+
+google map api is http://maps.googleapis.com/maps/api/geocode/json?address=41 rue de villiers neuilly sur seine 
+
+this script prompts you for an address, and then uses the google map api to get data for that address, and print its latitude and longitude. 
+
+usage: python google_map_api.py
+"""
 
 import requests
 
