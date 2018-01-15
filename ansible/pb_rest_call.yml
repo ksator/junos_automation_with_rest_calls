@@ -17,6 +17,12 @@
        - 830
        - 8080
  
+    - name: create device directories
+      local_action:
+       module: file
+       path: "{{playbook_dir}}/{{ inventory_hostname }}"
+       state: directory
+
 
     - name: make rest call to vmx devices
       local_action:
@@ -28,7 +34,7 @@
        HEADER_Content-Type: "application/xml"
        HEADER_Accept: "application/json"
        force_basic_auth: yes
-       dest: "{{ playbook_dir }}/somelog.json"
+       dest: "{{ playbook_dir }}/{{inventory_hostname}}/rpc_output.json"
       register: junos
 
     - name: Print some mx details
