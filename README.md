@@ -38,7 +38,7 @@ Graphical REST clients are for humans, so if you need automation and programmati
 
 We can use Python librairies to make REST calls. I am using the library requests.  
 
-Example: google map has a public API (read only). The python script [**google_map_api.py**](google_map_api.py) prompts you for an address, and then uses the google map API to get data for that address, and print its latitude and longitude. Run this command to use it:  
+Example: google map has a public API (read only). The python script [**google_map_api.py**](google_map/google_map_api.py) prompts you for an address, and then uses the google map API to get data for that address, and print its latitude and longitude. Run this command to use it:  
 ```
 python google_map_api.py
 ```
@@ -159,12 +159,12 @@ python junos/get_software_information_in_xml.py
 python junos/get_software_information_in_json.py
 ```
 
-[**get_configuration_with_filter.py**](junos/get_configuration_with_filter.py) script retrieves and print a subset of the Junos configuration from an MX router with a REST API call. It uses a filter to retrieves only a subset of the Junos configuration 
+[**get_configuration_with_filter.py**](junos/get_configuration_with_filter.py) script retrieves and print a subset of the Junos configuration from an MX router with a REST API call. It uses a filter to retrieves only a subset of the Junos configuration. It uses the HTTP method POST. 
 ```
 python junos/get_configuration_with_filter.py
 ```
 
-[**configure.py**](junos/configure.py) script configure a Junos device using a REST API call. 
+[**configure.py**](junos/configure.py) script configure a Junos device using a REST API call. It uses the HTTP method POST.
 ```
 python junos/configure.py
 ```
