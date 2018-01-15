@@ -72,7 +72,7 @@ lab@spine-03> show version | display xml rpc
 ```
 
 Some show commands use arguments, so the equivalents rpc require arguments:  
-Run this command to get the equivalent rpc of ```show chassis hardware clei-models```. There is one argument in the rpc.
+Run this command to get the equivalent rpc of ```show chassis hardware clei-models | display xml```. There is one argument in the rpc.
 ```
 pytraining@mx80-17> show chassis hardware clei-models | display xml rpc 
 <rpc-reply xmlns:junos="http://xml.juniper.net/junos/17.2R1/junos">
@@ -87,7 +87,7 @@ pytraining@mx80-17> show chassis hardware clei-models | display xml rpc
 </rpc-reply>
 ```
 
-Run this command to get the equivalent rpc for ```show route receive-protocol bgp 192.168.10.4 active-path hidden```. There are several arguments in the rpc.
+Run this command to get the equivalent rpc for ```show route receive-protocol bgp 192.168.10.4 active-path hidden | display xml```. There are several arguments in the rpc.
 ```
 pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path hidden | display xml rpc    
 <rpc-reply xmlns:junos="http://xml.juniper.net/junos/12.3R11/junos">
@@ -117,13 +117,27 @@ set system services rest enable-explorer
 
 ### How to use the Junos REST API explorer
 
-Here's how to use the Junos REST API explorer to make a REST call to get Junos data in XML. This example uses an HTTP GET. There is no argument in the RPC. The default port is 3000, but I am using 8080 in this example.     
+Here's how to use the Junos REST API explorer to make a REST call to get Junos data in XML. This example uses an HTTP GET. The RPC is ```get-software-information```. There is no argument in the RPC. This is the equivalent of ```show version | display xml```. The default port is 3000, but I am using 8080 in this example.     
 ![rest call get software information.png](explorer/rest_call_get-software-information.png)  
 
-Here's how to use the Junos REST API explorer to make a REST call when there are arguments in the RPC. In that case, we use an HTTP POST, despite it is only to read data. The default port is 3000, but I am using 8080 in this example.     
+Here's how to use the Junos REST API explorer to make a REST call when there are arguments in the RPC. This is the equivalent of ```show version brief | display xml```. The RPC is ```get-software-information``` and the RPC argument is <brief/>.
+```
+lab@jedi-vmx-2-vcp> show version brief | display xml rpc
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/17.2R1/junos">
+    <rpc>
+        <get-software-information>
+                <brief/>
+        </get-software-information>
+    </rpc>
+    <cli>
+        <banner></banner>
+    </cli>
+</rpc-reply>
+```
+In that case, we use an HTTP POST, despite it is only to read data. The default port is 3000, but I am using 8080 in this example.     
 ![rest_call_with_arguments.png](explorer/rest_call_with_args.png)
 
-Here's how to use the Junos REST API explorer to make a REST call with filters to get Junos data. This example uses an HTTP POST. The default port is 3000, but I am using 8080 in this example.     
+Here's how to use the Junos REST API explorer to make a REST call with filters to get Junos data. This example uses an HTTP POST. This is the equivalent of ``` show configuration interfaces ge-0/0/0 | display xml```. The default port is 3000, but I am using 8080 in this example.     
 ![rest_call_with_filter.png](explorer/rest_call_with_filter.png)
 
 
@@ -142,7 +156,7 @@ Run this command to retrieve and print the software information in a JSON repres
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/json"
 ```
 
-Run this command to retrieve a subset of the junos configuration in a XML representation from an vMX router with a REST call with a filter. It's the equivalent of ```show configuration interfaces interface ge-0/0/0```.  It's an HTTP POST. 
+Run this command to retrieve a subset of the junos configuration in a XML representation from an vMX router with a REST call with a filter. It's the equivalent of ```show configuration interfaces ge-0/0/0 | display xml```.  It's an HTTP POST. 
 ```
 curl http://172.30.52.152:8080/rpc/ -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml" -d "<get-config><source><running/></source><filter type="subtree"><configuration><interfaces><interface><name>ge-0/0/0</name></interface></interfaces></configuration></filter></get-config> "
 ```
