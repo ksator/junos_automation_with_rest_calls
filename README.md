@@ -1,3 +1,4 @@
+# JUNOS
 ### JUNOS REST API guide
 https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/rest-api/rest-api.pdf 
 
@@ -55,3 +56,14 @@ pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path
         </cli>
     </rpc-reply>
 ```
+# JUNOS SPACE
+The python scripts [junos_space.py](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space
+
+```
+python junos_space/junos_space.py
+```
+The output is ip addresses of all EX4300-48T from junos space: 
+```
+172.30.108.138
+172.30.108.134
+'''
