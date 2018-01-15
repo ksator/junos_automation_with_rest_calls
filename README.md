@@ -203,11 +203,14 @@ python junos/get_software_information_in_json.py
 python junos/get_configuration_with_filter.py
 ```
 
-[**configure.py**](junos/configure.py) script configure a Junos device using a REST API call. It uses the HTTP method POST.
+[**configure.py**](junos/configure.py) script configures a Junos device using a REST API call. It uses the HTTP method POST.
 ```
 python junos/configure.py
 ```
-
+[**audit_bgp.p**](junos/audit_bgp.py) script audits a list of devices using a REST API call. It uses the HTTP method GET to retrieve some BGP details in JSON. It then parses the output and shows the peers state.
+```
+usage: python junos/audit_bgp.py
+```
 
 # JUNOS SPACE REST API
 
