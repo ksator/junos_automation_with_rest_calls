@@ -106,7 +106,7 @@ pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path
     </rpc-reply>
 ```
 
-### Enable REST API on Junos
+### How to enable REST API on Junos
 
 Run these commands to enable REST API on Junos. The default port is 3000.  
 
@@ -117,7 +117,7 @@ set system services rest http
 set system services rest enable-explorer
 ```
 
-### Junos REST API explorer
+### How to use the Junos REST API explorer
 
 Here's how to use the Junos REST API explorer to make a REST call to read Junos data in XML.  
 The default port is 3000, but I am using 8080 in this example.     
@@ -130,7 +130,7 @@ The default port is 3000, but I am using 8080 in this example.
 
 
 
-### curl
+### How to make REST calls with curl
 
 curl is an open source command line tool for transferring data.  
 
@@ -149,7 +149,7 @@ Run this command to retrieve a subset of the junos configuration in a XML repres
 curl http://172.30.52.152:8080/rpc/ -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml" -d "<get-config><source><running/></source><filter type="subtree"><configuration><interfaces><interface><name>ge-0/0/0</name></interface></interfaces></configuration></filter></get-config> "
 ```
 
-### Python 
+### How to make REST calls with Python 
 
 We can use Python librairies to make REST calls. I am using the library requests.  
 
