@@ -2,6 +2,7 @@
 
 - [**What to find in this repository**](README.md#what-to-find-in-this-repository)
 - [**How to get locally the content of the remote repository**](README.md#what-to-find-in-this-repository)
+- [**REST calls with Python**](README.md#rest-calls-with-Python)
 - [**JUNOS**](README.md#junos)
     - [**junos rest api guide**](README.md#junos-rest-api-guide)
     - [**how to get the equivalent rpc of a junos show command**](README.md#how-to-get-the-equivalent-rpc-of-a-junos-show-command)
@@ -30,8 +31,7 @@ You can now use the local copy of this remote repository.
 We can use Python librairies to make REST calls. I am using the library requests.  
 
 Example:  
-google map has a public API (read only). The python script [**google_map_api.py**](google_map_api.py) prompts you for an address, and then uses the google map API to get data for that address, and print its latitude and longitude. 
-usage: 
+google map has a public API (read only). The python script [**google_map_api.py**](google_map_api.py) prompts you for an address, and then uses the google map API to get data for that address, and print its latitude and longitude. Run this command to use it:  
 ```
 python google_map_api.py
 ```
