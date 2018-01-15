@@ -24,7 +24,7 @@ You can now use the local copy of this remote repository.
 ### Junos REST API guide
 https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/rest-api/rest-api.pdf 
 
-### RPC
+### How to get the equivalent RPC of a Junos show command?
 
 Each junos show command has an equivalent rpc.   
 To get the equivalent rpc of a Junos show command, add ```| display xml rpc``` at the end of the show command.  
@@ -92,9 +92,14 @@ set system services rest enable-explorer
 ### Junos REST API explorer
 
 ### curl
+
+Retrieve and print the software information in a xml representation from an vMX router with a REST API call.  
+The rpc get-software-information is the equivalent of 'show version'
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml"
 ```
+Retrieve and print the software information in a json representation from an vMX router with a REST API call.  
+The rpc get-software-information is the equivalent of 'show version'
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/json"
 ```
