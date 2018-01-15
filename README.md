@@ -117,13 +117,11 @@ set system services rest enable-explorer
 
 ### How to use the Junos REST API explorer
 
-Here's how to use the Junos REST API explorer to make a REST call to get Junos data in XML.  
-The default port is 3000, but I am using 8080 in this example.     
+Here's how to use the Junos REST API explorer to make a REST call to get Junos data in XML. The default port is 3000, but I am using 8080 in this example.     
 ![rest call get software information.png](explorer/rest_call_get-software-information.png)  
 
 
-Here's how to use the Junos REST API explorer to make a REST call with filters to get Junos data.  
-The default port is 3000, but I am using 8080 in this example.     
+Here's how to use the Junos REST API explorer to make a REST call with filters to get Junos data. The default port is 3000, but I am using 8080 in this example.     
 ![rest_call_with_filter.png](explorer/rest_call_with_filter.png)
 
 
@@ -132,12 +130,12 @@ The default port is 3000, but I am using 8080 in this example.
 
 curl is an open source command line tool for transferring data.  
 
-Run this command to retrieve and print the software information in a xml representation from an vMX router with a REST API call. The rpc get-software-information is the equivalent of 'show version'
+Run this command to retrieve and print the software information in a XML representation from an vMX router with a REST API call. The rpc ```get-software-information``` is the equivalent of ```show version```
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml"
 ```
 
-Run this command to retrieve and print the software information in a json representation from an vMX router with a REST API call. The rpc get-software-information is the equivalent of 'show version'
+Run this command to retrieve and print the software information in a JSON representation from an vMX router with a REST API call. The rpc ```get-software-information``` is the equivalent of ```show version```
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/json"
 ```
