@@ -32,7 +32,7 @@ You can now use the local copy of this remote repository.
 Junos, Junos space, Contrail, Northstar, ... have REST API.  
 You first need to get the REST API documentation for your system.   
 Then you can use a graphical REST Client (REST Easy, RESTClient, Postman, ...) to start playing with REST APIs and learn more about REST APIs.  
-Graphical REST clients are for humans, so if you need automation and programmatic access, you have to use other REST clients. You can then use Python as a REST Client to handle REST Calls.  
+Graphical REST clients are for humans, so if you need automation and programmatic access, you have to use other sort of REST clients. You can then use Python as a REST Client to handle REST Calls.  
 
 # REST calls with Python
 
