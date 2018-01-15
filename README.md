@@ -26,6 +26,13 @@ cd rest_calls_to_juniper/
 ```
 You can now use the local copy of this remote repository.  
 
+# About REST APIs
+
+Junos, Junos space, Contrail, Northstar, ... have REST API.  
+You fisrt need to get the REST API documentation for your system.   
+Then you can use a graphical REST Client (REST Easy, RESTClient, Postman, ...) to start playing with REST APIs and learn more about REST APIs.  
+Graphical REST clients are for humans, so if you need automation and programmatic access, you have to use other REST clients. You can then use Python as a REST Client to handle REST Calls.  
+
 # REST calls with Python
 
 We can use Python librairies to make REST calls. I am using the library requests.  
@@ -37,6 +44,11 @@ python google_map_api.py
 ```
 
 # JUNOS
+
+You can use HTTP get and post methods to submit RPCs to the REST Server.  
+You can retrieve data in XML or JSON.  
+REST configuration is under “system services” (default port is 3000)  
+REST Explorer is an optional tool (GUI) for testing  
 
 ### Junos REST API guide
 it is located [**here**](https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/rest-api/rest-api.pdf) 
