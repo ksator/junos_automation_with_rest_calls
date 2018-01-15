@@ -23,7 +23,9 @@ You can now use the local copy of this remote repository.
 ### JUNOS REST API guide
 https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/rest-api/rest-api.pdf 
 
-### Each junos show command has an equivalent rpc 
+### RPC
+
+Each junos show command has an equivalent rpc.   
 
 To get the equivalent rpc of a Junos show command, add ```| display xml rpc``` at the end of your show command.  
 
