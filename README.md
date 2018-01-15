@@ -86,6 +86,7 @@ pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path
 ### Enable REST API on Junos
 
 Run these commands to enable REST API on Junos. The default port is 3000.  
+
 The below commands enable also a graphical REST API Explorer that allow to conveniently experiment with REST APIs.  
 ```
 lab@dc-vmx-3> show configuration system services rest | display set
@@ -95,10 +96,13 @@ set system services rest enable-explorer
 
 ### Junos REST API explorer
 
-Here's how to use the Junos REST API explorer to make a REST call to read Junos data in XML. The default port is 3000, but I am using 8080 in this example.     
-![rest call get software information.png](explorer/rest_call_get-software-information.png)
+Here's how to use the Junos REST API explorer to make a REST call to read Junos data in XML.  
+The default port is 3000, but I am using 8080 in this example.     
+![rest call get software information.png](explorer/rest_call_get-software-information.png)  
 
-Here's how to use the Junos REST API explorer to make a REST call with filters to read Junos data. The default port is 3000, but I am using 8080 in this example.     
+
+Here's how to use the Junos REST API explorer to make a REST call with filters to read Junos data.  
+The default port is 3000, but I am using 8080 in this example.     
 ![rest_call_with_filter.png](explorer/rest_call_with_filter.png)
 
 
@@ -111,10 +115,12 @@ Run this command to retrieve and print the software information in a xml represe
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml"
 ```
+
 Run this command to retrieve and print the software information in a json representation from an vMX router with a REST API call. The rpc get-software-information is the equivalent of 'show version'
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/json"
 ```
+
 Run this command to retrieve a subset of the junos configuration in a XML representation from an vMX router with a REST API call with a filter. 
 ```
 curl http://172.30.52.152:8080/rpc/ -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml" -d "<get-config><source><running/></source><filter type="subtree"><configuration><interfaces><interface><name>ge-0/0/0</name></interface></interfaces></configuration></filter></get-config> "
