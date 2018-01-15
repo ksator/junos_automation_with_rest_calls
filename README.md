@@ -92,6 +92,12 @@ set system services rest enable-explorer
 ### Junos REST API explorer
 
 ### curl
+```
+curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml"
+```
+```
+curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/json"
+```
 
 ### Python 
 
