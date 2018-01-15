@@ -2,7 +2,7 @@
 
 - [**What to find in this repository**](README.md#what-to-find-in-this-repository)
 - [**How to get locally the content of the remote repository**](README.md#what-to-find-in-this-repository)
-- [**REST calls with Python**](README.md#rest-calls-with-Python)
+- [**REST calls with Python**](README.md#rest-calls-with-python)
 - [**JUNOS**](README.md#junos)
     - [**junos rest api guide**](README.md#junos-rest-api-guide)
     - [**how to get the equivalent rpc of a junos show command**](README.md#how-to-get-the-equivalent-rpc-of-a-junos-show-command)
