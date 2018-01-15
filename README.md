@@ -138,7 +138,7 @@ In that case, we use an HTTP POST, despite it is only to read data. The default 
 ![rest_call_with_arguments.png](explorer/rest_call_with_args.png)
 
 Here's how to use the Junos REST API explorer to make a REST call with several RPC. In that case, we use an HTTP POST, despite it is only to read data. The default port is 3000, but I am using 8080 in this example.       
-![rest_call_with_several rpc.png](explorer/rest_call_with_several-rpc.png)  
+![rest_call_with_several rpc.png](explorer/rest_call_with_several_rpc.png)  
 
 Here's how to use the Junos REST API explorer to make a REST call with filters to get Junos data. This example uses an HTTP POST. This is the equivalent of ``` show configuration interfaces ge-0/0/0 | display xml```. The default port is 3000, but I am using 8080 in this example.     
 ![rest_call_with_filter.png](explorer/rest_call_with_filter.png)
