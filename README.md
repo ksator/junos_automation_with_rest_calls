@@ -220,7 +220,50 @@ session state for peer 192.168.1.1+179 is Established
 
 ### How to make REST calls with Ansible
 We can use Ansible to make rest calls. I am using the module uri. 
+The playbook [**pb_rest_call.yml**](ansible/pb_rest_call.yml) makes rest call to Junos devices and save the rpc output locally. It also parse the rpc output and prints some details.  
 
+```
+# ansible-playbook ansible/pb_rest_call.yml
+
+PLAY [check if some ports are reachable on Junos devices] *************************************************************************************
+
+TASK [check if some ports are reachable on Junos devices] *************************************************************************************
+ok: [dc-vmx-3] => (item=22)
+ok: [dc-vmx-4] => (item=22)
+ok: [dc-vmx-3] => (item=830)
+ok: [dc-vmx-4] => (item=830)
+ok: [dc-vmx-4] => (item=8080)
+ok: [dc-vmx-3] => (item=8080)
+
+TASK [create device directories] **************************************************************************************************************
+changed: [dc-vmx-3 -> localhost]
+changed: [dc-vmx-4 -> localhost]
+
+TASK [make rest call to vmx devices] **********************************************************************************************************
+changed: [dc-vmx-3 -> localhost]
+changed: [dc-vmx-4 -> localhost]
+
+TASK [Print some mx details] ******************************************************************************************************************
+ok: [dc-vmx-3] => {
+    "msg": "device dc-vmx-3 runs version 17.4R1.16"
+}
+ok: [dc-vmx-4] => {
+    "msg": "device dc-vmx-4 runs version 17.4R1.16"
+}
+
+PLAY RECAP ************************************************************************************************************************************
+dc-vmx-3                   : ok=4    changed=2    unreachable=0    failed=0
+dc-vmx-4                   : ok=4    changed=2    unreachable=0    failed=0
+```
+```
+# ls ansible
+dc-vmx-3  dc-vmx-4  pb_rest_call.yml
+```
+```
+# ls ansible/dc-vmx-3/
+rpc_output.json
+
+```
 
 # JUNOS SPACE REST API
 
