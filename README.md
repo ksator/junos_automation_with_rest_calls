@@ -5,7 +5,7 @@ https://www.juniper.net/documentation/en_US/junos/information-products/pathway-p
 
 To get the equivalent rpc of a Junos show command, add ```| display xml rpc``` at the end of your show command.  
 
-To get the equivalent rpc of ```show version```:
+The equivalent rpc of ```show version``` is get-software-information:
 
 ```
 lab@spine-03> show version | display xml rpc
