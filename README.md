@@ -29,17 +29,9 @@ You can now use the local copy of this remote repository.
 
 We can use Python librairies to make REST calls. I am using the library requests.  
 
-Example with google map: 
-
-google map URL for the address ```41 rue de villiers neuilly sur seine``` is 
-https://www.google.co.uk/maps/place/41+Rue+de+Villiers,+92200+Neuilly-sur-Seine,+France
-
-google map has also a public API (read only): 
-http://maps.googleapis.com/maps/api/geocode/json?address=41 rue de villiers neuilly sur seine 
-
-The python script [**google_map_api.py**](google_map_api.py) prompts you for an address, and then uses the google map API to get data for that address, and print its latitude and longitude. 
-
-usage
+Example:  
+google map has a public API (read only). The python script [**google_map_api.py**](google_map_api.py) prompts you for an address, and then uses the google map API to get data for that address, and print its latitude and longitude. 
+usage: 
 ```
 python google_map_api.py
 ```
