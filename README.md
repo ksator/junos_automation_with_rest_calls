@@ -79,13 +79,13 @@ pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path
 ### Enable REST API on Junos
 
 Run these commands to enable REST API on Junos.  
-The default port is 8080.  
+The default port is 3000.  
 
 The below commands enable also a graphical REST API Explorer that allow to conveniently experiment with REST APIs.   
 
 ```
 lab@dc-vmx-3> show configuration system services rest | display set
-set system services rest http port 8080
+set system services rest http
 set system services rest enable-explorer
 ```
 
