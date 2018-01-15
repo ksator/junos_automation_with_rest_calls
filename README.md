@@ -117,9 +117,11 @@ set system services rest enable-explorer
 
 ### How to use the Junos REST API explorer
 
+##### one single RPC, no argument
 Here's how to use the Junos REST API explorer to make a REST call to get Junos data in XML. This example uses an HTTP GET. The RPC is ```get-software-information```. There is no argument in the RPC. This is the equivalent of ```show version | display xml```. The default port is 3000, but I am using 8080 in this example.     
 ![rest call get software information.png](explorer/rest_call_get-software-information.png)  
 
+##### RPC with arguments
 Here's how to use the Junos REST API explorer to make a REST call when there are arguments in the RPC. This is the equivalent of ```show version brief | display xml```. The RPC is ```get-software-information``` and the RPC argument is <brief/>.
 ```
 lab@jedi-vmx-2-vcp> show version brief | display xml rpc
@@ -137,12 +139,13 @@ lab@jedi-vmx-2-vcp> show version brief | display xml rpc
 In that case, we use an HTTP POST, despite it is only to read data. The default port is 3000, but I am using 8080 in this example.     
 ![rest_call_with_arguments.png](explorer/rest_call_with_args.png)
 
+##### several RPC
 Here's how to use the Junos REST API explorer to make a REST call with several RPC. In that case, we use an HTTP POST, despite it is only to read data. The default port is 3000, but I am using 8080 in this example.       
 ![rest_call_with_several rpc.png](explorer/rest_call_with_several_rpc.png)  
 
+##### RPC with filters
 Here's how to use the Junos REST API explorer to make a REST call with filters to get Junos data. This example uses an HTTP POST. This is the equivalent of ``` show configuration interfaces ge-0/0/0 | display xml```. The default port is 3000, but I am using 8080 in this example.     
 ![rest_call_with_filter.png](explorer/rest_call_with_filter.png)
-
 
 
 ### How to make REST calls with curl
