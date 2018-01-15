@@ -222,7 +222,11 @@ session state for peer 192.168.1.1+179 is Established
 ### How to make REST calls with Ansible
 We can use Ansible to make rest calls. I am using the module uri. 
 
-The playbook [**pb_rest_call.yml**](ansible/pb_rest_call.yml) makes rest call to Junos devices and save the rpc output [**locally**](ansible). It also parses the rpc output and prints some details.  This playbook has been tested using Ansible 2.4.2.0
+The playbook [**pb_rest_call.yml**](ansible/pb_rest_call.yml) makes rest call to Junos devices and save the rpc output [**locally**](ansible). It also parses the rpc output and prints some details.  
+The ansible inventory file is [**hosts**](host) at the root of the repository.  
+The ansible configuration file is [**ansible.cfg**](ansible.cfg) at the root of the repository.  
+Devices credentials are in a yaml file in the [**group_vars**](group_vars) directory  
+This playbook has been tested using Ansible 2.4.2.0  
 
 ```
 # ansible-playbook ansible/pb_rest_call.yml
