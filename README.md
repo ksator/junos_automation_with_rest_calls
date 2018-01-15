@@ -106,6 +106,17 @@ curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "
 
 ### Python 
 
+[**get_software_information_in_xml.py**](junos/get_software_information_in_xml.py) retrieves and print the software information in a xml representation from an vMX router with a REST API call. 
+```
+python junos/get_software_information_in_xml.py
+```
+
+[**get_software_information_in_json.py**](junos/get_software_information_in_json.py) script retrieves in a json representation the software information from an MX router with a REST API call. The response is parsed and some details are printed. 
+```
+python junos/get_software_information_in_json.py
+```
+
+
 # JUNOS SPACE
 The python scripts [junos_space.py](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space
 
