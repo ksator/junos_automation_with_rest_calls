@@ -10,6 +10,7 @@
     - [**curl**](README.md#curl)
     - [**python**](README.md#python)
 - [**JUNOS SPACE**](README.md#junos-space)
+- [**Looking for more Junos automation solutions**](README.md#Looking-for-more-Junos-automation-solutions)
 
 # What to find in this repository
 
@@ -139,3 +140,10 @@ The python scripts [**junos_space.py**](junos_space/junos_space.py) extracts and
 ```
 python junos_space/junos_space.py
 ```
+
+# Looking for more Junos automation solutions
+
+https://github.com/ksator?tab=repositories
+https://gitlab.com/users/ksator/projects
+https://gist.github.com/ksator/
+
