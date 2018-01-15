@@ -80,6 +80,7 @@ pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path
 
 Run these commands to enable REST API on Junos.  
 The default port is 3000.  
+
 The below commands enable also a graphical REST API Explorer that allow to conveniently experiment with REST APIs.   
 
 ```
@@ -98,7 +99,11 @@ commit complete
 lab@dc-vmx-3#
 ```
 
+### Junos REST API explorer
 
+### curl
+
+### Python 
 
 # JUNOS SPACE
 The python scripts [junos_space.py](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space
