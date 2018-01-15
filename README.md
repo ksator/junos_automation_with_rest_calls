@@ -99,6 +99,10 @@ Here's how to use the Junos REST API explorer to make a REST call to read Junos 
 ![rest call to read](https://user-images.githubusercontent.com/16098629/34860528-70eac752-f75e-11e7-865c-0e032225fdcc.png)
 
 
+Here's how to use the Junos REST API explorer to make a REST call with filters to read Junos data. The default port is 3000, but I am using 8080 in this example.     
+![rest call with filter](https://user-images.githubusercontent.com/16098629/34853205-c81ebd02-f732-11e7-89f2-8896b8406fa2.png)
+
+
 ### curl
 
 curl is an open source command line tool for transferring data.  
