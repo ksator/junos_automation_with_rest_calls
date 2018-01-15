@@ -27,7 +27,7 @@ https://www.juniper.net/documentation/en_US/junos/information-products/pathway-p
 
 Each junos show command has an equivalent rpc.   
 To get the equivalent rpc of a Junos show command, add ```| display xml rpc``` at the end of the show command.  
-The equivalent rpc of ```show version``` is ```get-software-information```
+Run this command to get the equivalent rpc of ```show version``` (which is ```get-software-information```):
 ```
 lab@spine-03> show version | display xml rpc
 <rpc-reply xmlns:junos="http://xml.juniper.net/junos/17.3R1/junos">
@@ -42,8 +42,7 @@ lab@spine-03> show version | display xml rpc
 ```
 
 Some show commands use arguments, so the equivalents rpc require arguments:  
-To get the equivalent rpc of ```show chassis hardware clei-models```
-
+Run this command to get the equivalent rpc of ```show chassis hardware clei-models```:
 ```
 pytraining@mx80-17> show chassis hardware clei-models | display xml rpc 
 <rpc-reply xmlns:junos="http://xml.juniper.net/junos/17.2R1/junos">
@@ -58,7 +57,7 @@ pytraining@mx80-17> show chassis hardware clei-models | display xml rpc
 </rpc-reply>
 ```
 
-To get the equivalent rpc for ```show route receive-protocol bgp 192.168.10.4 active-path hidden```
+Run this command to get the equivalent rpc for ```show route receive-protocol bgp 192.168.10.4 active-path hidden```:
 ```
 pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path hidden | display xml rpc    
 <rpc-reply xmlns:junos="http://xml.juniper.net/junos/12.3R11/junos">
