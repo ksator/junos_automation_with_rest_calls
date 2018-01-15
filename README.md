@@ -1,4 +1,4 @@
-### Doc 
+### JUNOS REST API guide
 https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/rest-api/rest-api.pdf 
 
 ### how to get the equivalent rpc of a Junos show command
