@@ -4,14 +4,14 @@
 - [**How to get locally the content of the remote repository**](README.md#what-to-find-in-this-repository)
 - [**About REST API**](README.md#about-rest-api)
 - [**REST calls with Python**](README.md#rest-calls-with-python)
-- [**JUNOS**](README.md#junos)
+- [**JUNOS REST API**](README.md#junos-rest-api)
     - [**junos rest api guide**](README.md#junos-rest-api-guide)
     - [**how to get the equivalent rpc of a junos show command**](README.md#how-to-get-the-equivalent-rpc-of-a-junos-show-command)
     - [**enable rest api on junos**](README.md#how-to-enable-rest-api-on-junos)
     - [**junos rest api explorer**](README.md#how-to-use-the-junos-rest-api-explorer)
     - [**curl**](README.md#how-to-make-rest-calls-with-curl)
     - [**python**](README.md#how-to-make-rest-calls-with-python)
-- [**JUNOS SPACE**](README.md#junos-space)
+- [**JUNOS SPACE REST API**](README.md#junos-space-rest-api)
 - [**Looking for more Junos automation solutions**](README.md#looking-for-more-junos-automation-solutions)
 
 # What to find in this repository
@@ -174,7 +174,7 @@ python junos/configure.py
 ```
 
 
-# JUNOS SPACE
+# JUNOS SPACE REST API
 
 We can use Python librairies to make REST calls. I am using the library requests.  
 The python scripts [**junos_space.py**](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space.  
