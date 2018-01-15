@@ -72,7 +72,7 @@ lab@spine-03> show version | display xml rpc
 ```
 
 Some show commands use arguments, so the equivalents rpc require arguments:  
-Run this command to get the equivalent rpc of ```show chassis hardware clei-models```:
+Run this command to get the equivalent rpc of ```show chassis hardware clei-models```. There is one argument in the rpc.
 ```
 pytraining@mx80-17> show chassis hardware clei-models | display xml rpc 
 <rpc-reply xmlns:junos="http://xml.juniper.net/junos/17.2R1/junos">
@@ -87,7 +87,7 @@ pytraining@mx80-17> show chassis hardware clei-models | display xml rpc
 </rpc-reply>
 ```
 
-Run this command to get the equivalent rpc for ```show route receive-protocol bgp 192.168.10.4 active-path hidden```:
+Run this command to get the equivalent rpc for ```show route receive-protocol bgp 192.168.10.4 active-path hidden```. There are several arguments in the rpc.
 ```
 pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path hidden | display xml rpc    
 <rpc-reply xmlns:junos="http://xml.juniper.net/junos/12.3R11/junos">
@@ -108,7 +108,6 @@ pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path
 ### How to enable REST API on Junos
 
 Run these commands to enable REST API on Junos. The default port is 3000.  
-
 The below commands enable also a graphical REST API Explorer that allow to conveniently experiment with REST APIs.  
 ```
 lab@dc-vmx-3> show configuration system services rest | display set
@@ -118,12 +117,12 @@ set system services rest enable-explorer
 
 ### How to use the Junos REST API explorer
 
-Here's how to use the Junos REST API explorer to make a REST call to read Junos data in XML.  
+Here's how to use the Junos REST API explorer to make a REST call to get Junos data in XML.  
 The default port is 3000, but I am using 8080 in this example.     
 ![rest call get software information.png](explorer/rest_call_get-software-information.png)  
 
 
-Here's how to use the Junos REST API explorer to make a REST call with filters to read Junos data.  
+Here's how to use the Junos REST API explorer to make a REST call with filters to get Junos data.  
 The default port is 3000, but I am using 8080 in this example.     
 ![rest_call_with_filter.png](explorer/rest_call_with_filter.png)
 
