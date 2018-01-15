@@ -78,11 +78,8 @@ pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path
 
 ### Enable REST API on Junos
 
-Run these commands to enable REST API on Junos.  
-The default port is 3000.  
-
-The below commands enable also a graphical REST API Explorer that allow to conveniently experiment with REST APIs.   
-
+Run these commands to enable REST API on Junos. The default port is 3000.  
+The below commands enable also a graphical REST API Explorer that allow to conveniently experiment with REST APIs.  
 ```
 lab@dc-vmx-3> show configuration system services rest | display set
 set system services rest http
@@ -92,6 +89,8 @@ set system services rest enable-explorer
 ### Junos REST API explorer
 
 ### curl
+
+curl is an open source command line tool for transferring data.  
 
 Retrieve and print the software information in a xml representation from an vMX router with a REST API call.  
 The rpc get-software-information is the equivalent of 'show version'
@@ -106,25 +105,21 @@ curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "
 
 ### Python 
 
-[**get_software_information_in_xml.py**](junos/get_software_information_in_xml.py) retrieves and print the software information in a xml representation from an vMX router with a REST API call. 
+We can use Python librairies to make REST calls. I am using the library requests.  
+
+[**get_software_information_in_xml.py**](junos/get_software_information_in_xml.py) retrieves and print the software information in a XML representation from an vMX router with a REST API call. 
 ```
 python junos/get_software_information_in_xml.py
 ```
 
-[**get_software_information_in_json.py**](junos/get_software_information_in_json.py) script retrieves in a json representation the software information from an MX router with a REST API call. The response is parsed and some details are printed. 
+[**get_software_information_in_json.py**](junos/get_software_information_in_json.py) script retrieves in a JSON representation the software information from an MX router with a REST API call. The response is parsed and some details are printed. 
 ```
 python junos/get_software_information_in_json.py
 ```
 
 
 # JUNOS SPACE
-The python scripts [junos_space.py](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space
-
+The python scripts [junos_space.py](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space.  
 ```
 python junos_space/junos_space.py
-```
-The output is ip address of EX4300-48T devices from junos space: 
-```
-172.30.108.138
-172.30.108.134
 ```
