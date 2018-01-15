@@ -92,13 +92,11 @@ set system services rest enable-explorer
 
 curl is an open source command line tool for transferring data.  
 
-Run this command to retrieve and print the software information in a xml representation from an vMX router with a REST API call.  
-The rpc get-software-information is the equivalent of 'show version'
+Run this command to retrieve and print the software information in a xml representation from an vMX router with a REST API call. The rpc get-software-information is the equivalent of 'show version'
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml"
 ```
-Run this command to retrieve and print the software information in a json representation from an vMX router with a REST API call.  
-The rpc get-software-information is the equivalent of 'show version'
+Run this command to retrieve and print the software information in a json representation from an vMX router with a REST API call. The rpc get-software-information is the equivalent of 'show version'
 ```
 curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/json"
 ```
