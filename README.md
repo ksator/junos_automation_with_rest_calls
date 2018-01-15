@@ -85,7 +85,7 @@ The python scripts [junos_space.py](junos_space/junos_space.py) extracts and pri
 ```
 python junos_space/junos_space.py
 ```
-The output is ip addresses of all EX4300-48T from junos space: 
+The output is ip address of EX4300-48T devices from junos space: 
 ```
 172.30.108.138
 172.30.108.134
