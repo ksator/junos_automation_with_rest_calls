@@ -207,10 +207,20 @@ python junos/get_configuration_with_filter.py
 ```
 python junos/configure.py
 ```
-[**audit_bgp.py**](junos/audit_bgp.py) script audits a list of devices using a REST API call. It uses the HTTP method GET to retrieve some BGP details in JSON. It then parses the output and shows the peers state.
+[**audit_bgp.py**](junos/audit_bgp.py) script audits a list of devices using a REST API call. It uses the HTTP method GET to retrieve some BGP details in JSON. It then parses the output and shows the peers state.  
 ```
-usage: python junos/audit_bgp.py
+python junos/audit_bgp.py
+**************************************************
+auditing bgp peers state for device 172.30.52.152
+session state for peer 192.168.1.2+63127 is Established
+**************************************************
+auditing bgp peers state for device 172.30.52.153
+session state for peer 192.168.1.1+179 is Established
 ```
+
+### How to make REST calls with Ansible
+We can use Ansible to make rest calls. I am using the module uri. 
+
 
 # JUNOS SPACE REST API
 
