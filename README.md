@@ -1,3 +1,22 @@
+# Repository documentation structure
+
+- [**What to find in this repository**](README.md#what-to-find-in-this-repository)
+- [**How to get locally the content of the remote repository**](README.md#How-to-get-locally-the-content-of-the-remote-repository)
+
+# What to find in this repository
+
+REST calls examples for Juniper solutions.
+
+# How to get locally the content of the remote repository
+
+```
+sudo -s
+git clone https://github.com/ksator/rest_calls_to_juniper.git
+cd rest_calls_to_juniper/
+```
+You can now use the local copy of this remote repository.  
+
+
 # JUNOS
 ### JUNOS REST API guide
 https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/rest-api/rest-api.pdf 
