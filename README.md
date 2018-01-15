@@ -95,6 +95,10 @@ set system services rest enable-explorer
 
 ### Junos REST API explorer
 
+Here's how to use the junos rest api explorer to make a rest call to read junos data:   
+![rest call to read](https://user-images.githubusercontent.com/16098629/34860528-70eac752-f75e-11e7-865c-0e032225fdcc.png)
+
+
 ### curl
 
 curl is an open source command line tool for transferring data.  
