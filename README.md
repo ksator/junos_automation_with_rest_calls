@@ -120,6 +120,11 @@ python junos/get_software_information_in_json.py
 python junos/get_configuration_with_filter.py
 ```
 
+[**configure..py**](junos/configure.py) script configure a Junos device using a REST API call. 
+```
+python junos/configure.py
+```
+
 
 # JUNOS SPACE
 
