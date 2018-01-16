@@ -1,6 +1,6 @@
 ---
 
- - name: make rest calls to Junos devices
+ - name: make rest call to Junos devices, save and parse output
    hosts: vMX
    connection: local
    gather_facts: no
