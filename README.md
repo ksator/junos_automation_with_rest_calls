@@ -140,7 +140,7 @@ Here's how to use the Junos REST API explorer to make a REST call to get Junos d
 ![rest call get software information.png](explorer/rest_call_get-software-information.png)  
 
 ##### Junos REST API explorer usage: RPC with arguments
-Here's how to use the Junos REST API explorer to make a REST call when there are arguments in the RPC. This is the equivalent of ```show version brief | display xml```. The RPC is ```get-software-information``` and the RPC argument is <brief/>.
+Here's how to use the Junos REST API explorer to make a REST call when there are arguments in the RPC. This is the equivalent of ```show version brief | display xml```. The RPC is ```get-software-information``` and the RPC argument is ```<brief/>```.
 ```
 lab@jedi-vmx-2-vcp> show version brief | display xml rpc
 <rpc-reply xmlns:junos="http://xml.juniper.net/junos/17.2R1/junos">
