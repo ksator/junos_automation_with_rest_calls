@@ -1,9 +1,10 @@
 # Repository documentation structure
 
 - [**What to find in this repository**](README.md#what-to-find-in-this-repository)
-- [**How to get locally the content of the remote repository**](README.md#what-to-find-in-this-repository)
 - [**About REST API**](README.md#about-rest-api)
 - [**REST calls with Python**](README.md#rest-calls-with-python)
+- [**REST calls with Ansible**](README.md#rest-calls-with-ansible)
+- [**How to get locally the content of the remote repository**](README.md#what-to-find-in-this-repository)
 - [**JUNOS REST API**](README.md#junos-rest-api)
     - [**junos REST API guide**](README.md#junos-rest-api-guide)
     - [**how to get the equivalent RPC of a junos show command**](README.md#how-to-get-the-equivalent-rpc-of-a-junos-show-command)
@@ -19,20 +20,12 @@
 
 This repository has basic REST calls examples for Juniper solutions.
 
-# How to get locally the content of the remote repository
-
-```
-sudo -s
-git clone https://github.com/ksator/rest_calls_to_juniper.git
-cd rest_calls_to_juniper/
-```
-You can now use the local copy of this remote repository.  
-
 # About REST API
 
 Junos, Junos space, Contrail, Northstar, ... have REST API.  
 You first need to get the REST API documentation for your system.   
 Then you can use a graphical REST Client (REST Easy, RESTClient, Postman, ...) to start playing with REST APIs and learn more about REST APIs.  
+
 Graphical REST clients are for humans, so if you need automation and programmatic access, you have to use other sort of REST clients. You can then use Python as a REST Client to handle REST Calls.  
 
 # REST calls with Python
@@ -43,6 +36,20 @@ Example: google map has a public API (read only). The python script [**google_ma
 ```
 python google_map_api.py
 ```
+
+# REST calls with Ansible 
+
+We can use Ansible to make rest calls. I am using the module uri. 
+
+
+# How to get locally the content of the remote repository
+
+```
+sudo -s
+git clone https://github.com/ksator/rest_calls_to_juniper.git
+cd rest_calls_to_juniper/
+```
+You can now use the local copy of this remote repository.  
 
 # JUNOS REST API
 
