@@ -208,7 +208,10 @@ python junos/get_software_information_in_xml.py
 
 [**get_software_information_in_json.py**](junos/get_software_information_in_json.py) script retrieves in a JSON representation the software information from an MX router with a REST API call. It uses the HTTP method GET. The response is parsed and some details are printed. 
 ```
-python junos/get_software_information_in_json.py
+$ python junos/get_software_information_in_json.py 
+Software version: 17.4R1.16
+Host-name: dc-vmx-3
+Product name: vmx
 ```
 
 [**get_configuration_with_filter.py**](junos/get_configuration_with_filter.py) script retrieves and print a subset of the Junos configuration from an MX router with a REST API call. It uses a filter to retrieves only a subset of the Junos configuration. It uses the HTTP method POST. 
