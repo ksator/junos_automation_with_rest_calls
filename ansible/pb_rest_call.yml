@@ -1,6 +1,6 @@
 ---
 
- - name: check if some ports are reachable on Junos devices
+ - name: make rest calls to Junos devices
    hosts: vMX
    connection: local
    gather_facts: no
