@@ -34,7 +34,7 @@ We can use Python librairies to make REST calls. I am using the library requests
 
 Example: google map has a public API (read only). The python script [**google_map_api.py**](google_map/google_map_api.py) prompts you for an address, and then uses the google map API to get data for that address, and print its latitude and longitude. Run this command to use it:  
 ```
-python google_map_api.py
+$ python google_map_api.py
 ```
 
 # REST calls with Ansible 
@@ -169,32 +169,32 @@ curl is an open source command line tool for transferring data.
 
 Run this command to retrieve and print the software information in a XML representation from an vMX router with a REST call. It's an HTTP GET. The rpc ```get-software-information``` is the equivalent of ```show version```. 
 ```
-curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml"
+$ curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml"
 ```
 
 Run this command to retrieve and print the software information in a JSON representation from an vMX router with a REST call. It's an HTTP GET. The rpc ```get-software-information``` is the equivalent of ```show version```
 ```
-curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/json"
+$ curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/json"
 ```
 
 ##### RPC with arguments
 
 Run this command to retrieve and print the software information in a XML representation from an vMX router with a REST call. This is the equivalent of ```show version brief | display xml```. The RPC is ```get-software-information``` and the RPC argument is <brief/>.  It's an HTTP POST. 
 ```
-curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml" -d "<brief/>"
+$ curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml" -d "<brief/>"
 ```
 ##### several RPC
 
 Run this command to make a REST call with several RPC. In that case, we use an HTTP POST, despite it is only to read data. The list of RPC is ```get-bgp-neighbor-information``` and ```get-software-information```. The default port is 3000, but I am using 8080 in this example.  
 ```
-curl http://172.30.52.152:8080/rpc?stop-on-error=1 -u "lab:m0naco" -H "Content-Type: plain/text" -H "Accept: application/xml" -d "<get-bgp-neighbor-information/> <get-software-information/>"
+$ curl http://172.30.52.152:8080/rpc?stop-on-error=1 -u "lab:m0naco" -H "Content-Type: plain/text" -H "Accept: application/xml" -d "<get-bgp-neighbor-information/> <get-software-information/>"
 ```
 
 ##### RPC with a filter
 
 Run this command to retrieve a subset of the junos configuration in a XML representation from an vMX router with a REST call with a filter. It's the equivalent of ```show configuration interfaces ge-0/0/0 | display xml```.  It's an HTTP POST. 
 ```
-curl http://172.30.52.152:8080/rpc/ -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml" -d "<get-config><source><running/></source><filter type="subtree"><configuration><interfaces><interface><name>ge-0/0/0</name></interface></interfaces></configuration></filter></get-config> "
+$ curl http://172.30.52.152:8080/rpc/ -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml" -d "<get-config><source><running/></source><filter type="subtree"><configuration><interfaces><interface><name>ge-0/0/0</name></interface></interfaces></configuration></filter></get-config> "
 ```
 
 ### How to make REST calls with Python 
@@ -203,7 +203,7 @@ We can use Python librairies to make REST calls. I am using the library requests
 
 [**get_software_information_in_xml.py**](junos/get_software_information_in_xml.py) retrieves and print the software information in a XML representation from an vMX router with a REST call. It uses the HTTP method GET. 
 ```
-python junos/get_software_information_in_xml.py
+$ python junos/get_software_information_in_xml.py
 ```
 
 [**get_software_information_in_json.py**](junos/get_software_information_in_json.py) script retrieves in a JSON representation the software information from an MX router with a REST API call. It uses the HTTP method GET. The response is parsed and some details are printed. 
@@ -216,7 +216,7 @@ Product name: vmx
 
 [**get_configuration_with_filter.py**](junos/get_configuration_with_filter.py) script retrieves and print a subset of the Junos configuration from an MX router with a REST API call. It uses a filter to retrieves only a subset of the Junos configuration. It uses the HTTP method POST. 
 ```
-python junos/get_configuration_with_filter.py
+$ python junos/get_configuration_with_filter.py
 ```
 
 [**configure.py**](junos/configure.py) script configures a Junos device using a REST API call. It uses the HTTP method POST.
@@ -236,7 +236,7 @@ lab@dc-vmx-3> show configuration | compare rollback 1
 
 [**audit_bgp.py**](junos/audit_bgp.py) script audits a list of devices using a REST API call. It uses the HTTP method GET to retrieve some BGP details in JSON. It then parses the output and shows the peers state.  
 ```
-python junos/audit_bgp.py
+$ python junos/audit_bgp.py
 **************************************************
 auditing bgp peers state for device 172.30.52.152
 session state for peer 192.168.1.2+63127 is Established
@@ -258,7 +258,7 @@ The playbook [**pb_rest_call.yml**](ansible/pb_rest_call.yml) makes rest call to
 
 
 ```
-# ansible-playbook ansible/pb_rest_call.yml
+$ ansible-playbook ansible/pb_rest_call.yml
 
 PLAY [make rest call to Junos devices, save and parse output] *************************************************************************************
 
@@ -291,11 +291,11 @@ dc-vmx-3                   : ok=4    changed=2    unreachable=0    failed=0
 dc-vmx-4                   : ok=4    changed=2    unreachable=0    failed=0
 ```
 ```
-# ls ansible
+$  ls ansible
 dc-vmx-3  dc-vmx-4  pb_rest_call.yml
 ```
 ```
-# ls ansible/dc-vmx-3/
+$  ls ansible/dc-vmx-3/
 rpc_output.json
 
 ```
@@ -339,7 +339,7 @@ get-bgp-neighbor-information_output.json  get-software-information_output.json  
 We can use Python librairies to make REST calls. I am using the library requests.  
 The python scripts [**junos_space.py**](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space.  
 ```
-python junos_space/junos_space.py
+$ python junos_space/junos_space.py
 ```
 
 # Looking for more Junos automation solutions
