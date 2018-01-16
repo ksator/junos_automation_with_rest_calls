@@ -133,6 +133,8 @@ set system services rest enable-explorer
 
 ### How to use the Junos REST API explorer
 
+Junos REST API explorer is an optional graphical tool for testing Junos REST API. It is embeded in Junos, and allows to conveniently experiment with REST APIs.
+
 ##### Junos REST API explorer usage: one single RPC, no argument
 Here's how to use the Junos REST API explorer to make a REST call to get Junos data in XML. This example uses an HTTP GET. The RPC is ```get-software-information```. There is no argument in the RPC. This is the equivalent of ```show version | display xml```. The default port is 3000, but I am using 8080 in this example.     
 ![rest call get software information.png](explorer/rest_call_get-software-information.png)  
