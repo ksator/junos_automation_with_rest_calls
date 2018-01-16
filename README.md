@@ -248,16 +248,18 @@ session state for peer 192.168.1.1+179 is Established
 ### How to make REST calls with Ansible
 We can use Ansible to make rest calls. I am using the module uri. 
 
-The playbook [**pb_rest_call.yml**](ansible/pb_rest_call.yml) makes rest call to Junos devices and save the rpc output [**locally**](ansible). It also parses the rpc output and prints some details.  
 The ansible inventory file is [**hosts**](hosts) at the root of the repository.  
 The ansible configuration file is [**ansible.cfg**](ansible.cfg) at the root of the repository.  
 Devices credentials are in a yaml file in the [**group_vars**](group_vars) directory  
 This playbook has been tested using Ansible 2.4.2.0  
 
+The playbook [**pb_rest_call.yml**](ansible/pb_rest_call.yml) makes rest call to Junos devices and save the rpc output [**locally**](ansible). It also parses the rpc output and prints some details.  
+
+
 ```
 # ansible-playbook ansible/pb_rest_call.yml
 
-PLAY [check if some ports are reachable on Junos devices] *************************************************************************************
+PLAY [make rest call to Junos devices, save and parse output] *************************************************************************************
 
 TASK [check if some ports are reachable on Junos devices] *************************************************************************************
 ok: [dc-vmx-3] => (item=22)
@@ -296,6 +298,40 @@ dc-vmx-3  dc-vmx-4  pb_rest_call.yml
 rpc_output.json
 
 ```
+
+The playbook [**pb_rest_calls.yml**](ansible/pb_rest_calls.yml) makes several rest calls to several Junos devices and save the rpc output [**locally**](ansible). 
+```
+$ ansible-playbook ansible/pb_rest_calls.yml 
+
+PLAY [make rest calls to junos devices] **********************************************************************************************************************************
+
+TASK [check if some ports are reachable on Junos devices] ****************************************************************************************************************
+ok: [dc-vmx-4] => (item=22)
+ok: [dc-vmx-3] => (item=22)
+ok: [dc-vmx-4] => (item=830)
+ok: [dc-vmx-3] => (item=830)
+ok: [dc-vmx-4] => (item=8080)
+ok: [dc-vmx-3] => (item=8080)
+
+TASK [create device directories] *****************************************************************************************************************************************
+ok: [dc-vmx-4 -> localhost]
+ok: [dc-vmx-3 -> localhost]
+
+TASK [make rest call to vmx devices] *************************************************************************************************************************************
+changed: [dc-vmx-3 -> localhost] => (item=get-software-information)
+changed: [dc-vmx-4 -> localhost] => (item=get-software-information)
+changed: [dc-vmx-3 -> localhost] => (item=get-bgp-neighbor-information)
+changed: [dc-vmx-4 -> localhost] => (item=get-bgp-neighbor-information)
+
+PLAY RECAP ***************************************************************************************************************************************************************
+dc-vmx-3                   : ok=3    changed=1    unreachable=0    failed=0   
+dc-vmx-4                   : ok=3    changed=1    unreachable=0    failed=0   
+```
+```
+$ ls ansible/dc-vmx-3/
+get-bgp-neighbor-information_output.json  get-software-information_output.json  rpc_output.json
+```
+
 
 # JUNOS SPACE REST API
 
