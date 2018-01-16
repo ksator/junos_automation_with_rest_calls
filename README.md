@@ -39,7 +39,7 @@ python google_map_api.py
 
 # REST calls with Ansible 
 
-We can use Ansible to make rest calls. I am using the module uri. 
+We can use Ansible to make rest calls. I am using the module [**uri**](http://docs.ansible.com/ansible/latest/uri_module.html). 
 
 
 # How to get locally the content of the remote repository
