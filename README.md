@@ -165,7 +165,7 @@ Here's how to use the Junos REST API explorer to make a REST call with filters t
 
 curl is an open source command line tool for transferring data.  
 
-##### one single RPC, no argument
+##### curl usage with: one single RPC, no argument
 
 Run this command to retrieve and print the software information in a XML representation from an vMX router with a REST call. It's an HTTP GET. The rpc ```get-software-information``` is the equivalent of ```show version```. 
 ```
@@ -177,20 +177,20 @@ Run this command to retrieve and print the software information in a JSON repres
 $ curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/json"
 ```
 
-##### RPC with arguments
+##### curl usage with: RPC with arguments
 
-Run this command to retrieve and print the software information in a XML representation from an vMX router with a REST call. This is the equivalent of ```show version brief | display xml```. The RPC is ```get-software-information``` and the RPC argument is <brief/>.  It's an HTTP POST. 
+Run this command to retrieve and print the software information in a XML representation from an vMX router with a REST call. This is the equivalent of ```show version brief | display xml```. The RPC is ```get-software-information``` and the RPC argument is ```<brief/>```.  It's an HTTP POST. 
 ```
 $ curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml" -d "<brief/>"
 ```
-##### several RPC
+##### curl usage with: several RPC
 
 Run this command to make a REST call with several RPC. In that case, we use an HTTP POST, despite it is only to read data. The list of RPC is ```get-bgp-neighbor-information``` and ```get-software-information```. The default port is 3000, but I am using 8080 in this example.  
 ```
 $ curl http://172.30.52.152:8080/rpc?stop-on-error=1 -u "lab:m0naco" -H "Content-Type: plain/text" -H "Accept: application/xml" -d "<get-bgp-neighbor-information/> <get-software-information/>"
 ```
 
-##### RPC with a filter
+##### curl usage with: RPC with a filter
 
 Run this command to retrieve a subset of the junos configuration in a XML representation from an vMX router with a REST call with a filter. It's the equivalent of ```show configuration interfaces ge-0/0/0 | display xml```.  It's an HTTP POST. 
 ```
