@@ -35,6 +35,9 @@ We can use Python librairies to make REST calls. I am using the library requests
 Example: google map has a public API (read only). The python script [**google_map_api.py**](google_map/google_map_api.py) prompts you for an address, and then uses the google map API to get data for that address, and print its latitude and longitude. Run this command to use it:  
 ```
 $ python google_map_api.py
+which address: 41 rue de villiers neuilly sur seine
+latitude is 48.8890315
+longitude is 2.2806278
 ```
 
 # REST calls with Ansible 
