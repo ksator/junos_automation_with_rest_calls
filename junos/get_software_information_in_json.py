@@ -11,7 +11,7 @@ from requests.auth import HTTPBasicAuth
 
 my_headers = { 'Accept': 'application/json' }
 
-r = requests.get('http://172.30.177.170:3000/rpc/get-software-information', auth=HTTPBasicAuth('pytraining', 'Poclab123'), headers=my_headers)
+r = requests.get('http://172.30.52.152:8080/rpc/get-software-information', auth=HTTPBasicAuth('lab', 'm0naco'), headers=my_headers)
 
 #type(r.json())
 #pprint(r.json())
