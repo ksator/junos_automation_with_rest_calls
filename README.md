@@ -221,8 +221,19 @@ python junos/get_configuration_with_filter.py
 
 [**configure.py**](junos/configure.py) script configures a Junos device using a REST API call. It uses the HTTP method POST.
 ```
-python junos/configure.py
+$ python junos/configure.py 
+200
 ```
+```
+lab@dc-vmx-3> show system commit 
+0   2018-01-16 10:01:11 UTC by lab via junoscript
+```
+```                                        
+lab@dc-vmx-3> show configuration | compare rollback 1 
+[edit system login]
++   message "welcome to REST demo";
+```
+
 [**audit_bgp.py**](junos/audit_bgp.py) script audits a list of devices using a REST API call. It uses the HTTP method GET to retrieve some BGP details in JSON. It then parses the output and shows the peers state.  
 ```
 python junos/audit_bgp.py
