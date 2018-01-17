@@ -352,6 +352,8 @@ $ python junos_space/junos_space.py
 
 # AWX REST API
 
+[About AWX](https://www.ansible.com/products/awx-project/faq)
+
 We can use Python librairies to make REST calls. I am using the library requests.  
 The python scripts [**awx.py**](AWX/awx.py) uses the AWX REST API to execute an AWX template and to print the status.
 Usage:
