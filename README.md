@@ -224,7 +224,8 @@ Product name: vmx
 $ python junos/get_configuration_with_filter.py
 ```
 
-[**configure.py**](junos/configure.py) script configures a Junos device using a REST API call. It uses the HTTP method POST.
+[**configure.py**](junos/configure.py) script configures a Junos device using a REST API call. It uses the HTTP method POST. It does these operations: lock-configuration, load-configuration, commit and unlock-configuration, and returns an HTTP response code. 
+
 ```
 $ python junos/configure.py 
 200
