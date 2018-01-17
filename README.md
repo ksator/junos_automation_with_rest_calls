@@ -354,7 +354,23 @@ $ python junos_space/junos_space.py
 
 We can use Python librairies to make REST calls. I am using the library requests.  
 The python scripts [**awx.py**](AWX/awx.py) uses the AWX REST API to execute an AWX template and to print the status.
-
+Usage:
+``` 
+$ python AWX/awx.py <template_name>
+```
+Example: 
+```
+$ python AWX/awx.py wrong_name
+there is a problem with that template
+```
+Example: 
+```
+$ python AWX/awx.py valid_name
+waiting for the job to complete ... 
+still waiting for the job to complete ...
+still waiting for the job to complete ...
+status is successful
+```
 
 # Looking for more Junos automation solutions
 
