@@ -6,22 +6,22 @@
             "attributes" : {"junos:style" : "detail"}, 
             "peer-address" : [
             {
-                "data" : "192.168.1.2+63127"
+                "data" : "192.168.1.1+179"
             }
             ], 
             "peer-as" : [
             {
-                "data" : "110"
+                "data" : "104"
             }
             ], 
             "local-address" : [
             {
-                "data" : "192.168.1.1+179"
+                "data" : "192.168.1.2+63127"
             }
             ], 
             "local-as" : [
             {
-                "data" : "104"
+                "data" : "110"
             }
             ], 
             "peer-group" : [
@@ -107,7 +107,7 @@
                 ], 
                 "local-as" : [
                 {
-                    "data" : "104"
+                    "data" : "110"
                 }
                 ], 
                 "local-system-as" : [
@@ -119,41 +119,17 @@
             ], 
             "flap-count" : [
             {
-                "data" : "1"
-            }
-            ], 
-            "last-flap-event" : [
-            {
-                "data" : "RecvNotify"
-            }
-            ], 
-            "bgp-error" : [
-            {
-                "name" : [
-                {
-                    "data" : "Cease"
-                }
-                ], 
-                "send-count" : [
-                {
-                    "data" : "0"
-                }
-                ], 
-                "receive-count" : [
-                {
-                    "data" : "1"
-                }
-                ]
+                "data" : "0"
             }
             ], 
             "peer-id" : [
             {
-                "data" : "172.30.52.153"
+                "data" : "172.30.52.152"
             }
             ], 
             "local-id" : [
             {
-                "data" : "172.30.52.152"
+                "data" : "172.30.52.153"
             }
             ], 
             "active-holdtime" : [
@@ -280,7 +256,7 @@
             ], 
             "peer-4byte-as-capability-advertised" : [
             {
-                "data" : "110"
+                "data" : "104"
             }
             ], 
             "peer-addpath-not-supported" : [
@@ -313,17 +289,17 @@
                 ], 
                 "active-prefix-count" : [
                 {
-                    "data" : "7"
+                    "data" : "0"
                 }
                 ], 
                 "received-prefix-count" : [
                 {
-                    "data" : "10"
+                    "data" : "3"
                 }
                 ], 
                 "accepted-prefix-count" : [
                 {
-                    "data" : "10"
+                    "data" : "3"
                 }
                 ], 
                 "suppressed-prefix-count" : [
@@ -333,29 +309,29 @@
                 ], 
                 "advertised-prefix-count" : [
                 {
-                    "data" : "3"
+                    "data" : "10"
                 }
                 ]
             }
             ], 
             "last-received" : [
             {
-                "data" : "353016"
+                "data" : "390228"
             }
             ], 
             "last-sent" : [
             {
-                "data" : "260650"
+                "data" : "389873"
             }
             ], 
             "last-checked" : [
             {
-                "data" : "353016"
+                "data" : "390228"
             }
             ], 
             "input-messages" : [
             {
-                "data" : "9666"
+                "data" : "14448"
             }
             ], 
             "input-updates" : [
@@ -370,12 +346,12 @@
             ], 
             "input-octets" : [
             {
-                "data" : "183749"
+                "data" : "274549"
             }
             ], 
             "output-messages" : [
             {
-                "data" : "9658"
+                "data" : "14450"
             }
             ], 
             "output-updates" : [
@@ -390,7 +366,7 @@
             ], 
             "output-octets" : [
             {
-                "data" : "183539"
+                "data" : "274601"
             }
             ], 
             "bgp-output-queue" : [
