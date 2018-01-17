@@ -14,7 +14,7 @@
     - [**how to make REST calls with python**](README.md#how-to-make-rest-calls-with-python)
     - [**how to make REST calls with ansible**](README.md#how-to-make-rest-calls-with-ansible)
 - [**JUNOS SPACE REST API**](README.md#junos-space-rest-api)
-- [**AWX REST API**](README.md#awx)
+- [**AWX REST API**](README.md#awx-rest-api)
 - [**Looking for more Junos automation solutions**](README.md#looking-for-more-junos-automation-solutions)
 
 # What to find in this repository
