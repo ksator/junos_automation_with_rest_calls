@@ -7,7 +7,12 @@ google map api is http://maps.googleapis.com/maps/api/geocode/json?address=41 ru
 
 this script prompts you for an address, and then uses the google map api to get data for that address, and print its latitude and longitude. 
 
-usage: python google_map_api.py
+usage: 
+python google_map_api.py
+which address: 41 rue de villiers neuilly sur seine
+latitude is 48.8890315
+longitude is 2.2806278
+
 """
 
 import requests
