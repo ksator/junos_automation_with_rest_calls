@@ -239,7 +239,7 @@ lab@dc-vmx-3> show configuration | compare rollback 1
 +   message "welcome to REST demo";
 ```
 
-[**audit_bgp.py**](junos/audit_bgp.py) script audits a list of devices using a REST API call. It uses the HTTP method GET to retrieve some BGP details in JSON. It then parses the output and shows the peers state.  
+[**audit_bgp.py**](junos/audit_bgp.py) script audits a list of devices using a REST API call. It uses the HTTP method GET to retrieve some BGP details in JSON. It uses the RPC ```get-bgp-neighbor-information```. It then parses the JSON output and prints the peers state.  
 ```
 $ python junos/audit_bgp.py
 **************************************************
