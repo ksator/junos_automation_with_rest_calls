@@ -206,12 +206,12 @@ $ curl http://172.30.52.152:8080/rpc/ -u "lab:m0naco" -H "Content-Type: applicat
 
 We can use Python librairies to make REST calls. I am using the library requests.  
 
-[**get_software_information_in_xml.py**](junos/get_software_information_in_xml.py) retrieves and print the software information in a XML representation from an vMX router with a REST call. It uses the HTTP method GET. 
+[**get_software_information_in_xml.py**](junos/get_software_information_in_xml.py) retrieves and print the software information in a XML representation from an vMX router with a REST call. It uses the HTTP method GET, with the RPC ```get-software-information``` and no argument. 
 ```
 $ python junos/get_software_information_in_xml.py
 ```
 
-[**get_software_information_in_json.py**](junos/get_software_information_in_json.py) script retrieves in a JSON representation the software information from an MX router with a REST API call. It uses the HTTP method GET. The response is parsed and some details are printed. 
+[**get_software_information_in_json.py**](junos/get_software_information_in_json.py) script retrieves in a JSON representation the software information from an MX router with a REST API call. It uses the HTTP method GET with the RPC ```get-software-information``` and no argument. The JSON response is parsed and some details are printed. 
 ```
 $ python junos/get_software_information_in_json.py 
 Software version: 17.4R1.16
