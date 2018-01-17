@@ -255,8 +255,6 @@ session state for peer 192.168.1.1+179 is Established
 
 ### How to make REST calls with Ansible
 
-We can use Ansible to make rest calls. I am using the module uri. 
-
 The ansible inventory file is [**hosts**](hosts) at the root of the repository.  
 The ansible configuration file is [**ansible.cfg**](ansible.cfg) at the root of the repository.  
 Devices credentials are in a yaml file in the [**group_vars**](group_vars) directory  
@@ -344,7 +342,6 @@ get-bgp-neighbor-information_output.json  get-software-information_output.json  
 
 # JUNOS SPACE REST API
 
-We can use Python librairies to make REST calls. I am using the library requests.  
 The python scripts [**junos_space.py**](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space.  
 ```
 $ python junos_space/junos_space.py
@@ -354,7 +351,6 @@ $ python junos_space/junos_space.py
 
 [About AWX](https://www.ansible.com/products/awx-project/faq)
 
-We can use Python librairies to make REST calls. I am using the library requests.  
 The python scripts [**awx.py**](AWX/awx.py) uses the AWX REST API to execute an AWX template and to print the status.
 Usage:
 ``` 
