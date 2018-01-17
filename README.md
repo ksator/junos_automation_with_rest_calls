@@ -69,7 +69,7 @@ it is located [**here**](https://www.juniper.net/documentation/en_US/junos/infor
 Each junos show command has an equivalent rpc.   
 To get the equivalent rpc of a Junos show command, add ```| display xml rpc``` at the end of the show command.  
 
-##### RPC without argument
+##### show command/RPC without argument
 
 Run this command to get the equivalent rpc of ```show version``` (which is ```get-software-information```):
 ```
@@ -85,7 +85,7 @@ lab@spine-03> show version | display xml rpc
 </rpc-reply>
 ```
 
-##### RPC with arguments
+##### show command/RPC with arguments
 
 Some show commands use arguments, so the equivalents rpc require arguments:  
 Run this command to get the equivalent rpc of ```show chassis hardware clei-models | display xml```. There is one argument in the rpc.
