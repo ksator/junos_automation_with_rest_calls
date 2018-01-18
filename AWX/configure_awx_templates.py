@@ -20,9 +20,9 @@ import json
 authuser = 'admin'
 authpwd = 'password'
 headers = { 'content-type' : 'application/json' }
-url = 'http://192.168.233.134/api/v2/job_templates/'
+url = 'http://192.168.233.136/api/v2/job_templates/'
 
-playbook_list = ['pb.check.lldp.yml', 'pb.check.bgp.yml', 'pb.check.interfaces.yml', 'pb.check.vlans.yml', 'pb.check.lldp.json.yml']
+playbook_list = ['pb.check.lldp.yml', 'pb.check.bgp.yml', 'pb.check.interfaces.yml', 'pb.check.vlans.yml', 'pb.check.lldp.json.yml',  'pb.configure.golden.yml', 'pb.configure.telemetry.yml', 'pb.rollback.yml', 'pb.print.facts.yml', 'pb.check.all.yml', 'pb.check.ports.availability.yml']
 
 for item in playbook_list: 
  payload = {
