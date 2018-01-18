@@ -19,7 +19,7 @@
 
 # What to find in this repository
 
-This repository has basic REST calls examples for Juniper solutions.
+This repository has basic REST calls examples for various Juniper solutions.
 
 # About REST API
 
