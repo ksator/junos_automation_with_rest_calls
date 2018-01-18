@@ -352,20 +352,20 @@ $ python junos_space/junos_space.py
 [**About AWX**](https://www.ansible.com/products/awx-project/faq)  
 [**AWX REST API guide**](http://docs.ansible.com/ansible-tower/2.3.0/html/towerapi/index.html)  
 
-The python scripts [**awx.py**](AWX/awx.py) uses the AWX REST API to execute an AWX template and to print the status.  
+The python scripts [**run_awx_templates.py**](AWX/run_awx_templates.py) uses the AWX REST API to execute an AWX template and to print the status.  
 
 Usage:
 ``` 
-$ python AWX/awx.py <template_name>
+$ python AWX/run_awx_templates.py <template_name>
 ```
 Example: 
 ```
-$ python AWX/awx.py wrong_name
+$ python AWX/run_awx_templates.py wrong_name
 there is a problem with that template
 ```
 Example: 
 ```
-$ python AWX/awx.py valid_name
+$ python AWX/run_awx_templates.py valid_name
 waiting for the job to complete ... 
 still waiting for the job to complete ...
 still waiting for the job to complete ...
