@@ -4,7 +4,7 @@
 - [**About REST API**](README.md#about-rest-api)
 - [**REST calls with Python**](README.md#rest-calls-with-python)
 - [**REST calls with Ansible**](README.md#rest-calls-with-ansible)
-- [**How to get locally the content of the remote repository**](README.md#what-to-find-in-this-repository)
+- [**How to get locally the content of the remote repository**](README.md#how-to-get-locally-the-content-of-the-remote-repository)
 - [**JUNOS REST API**](README.md#junos-rest-api)
     - [**junos REST API guide**](README.md#junos-rest-api-guide)
     - [**how to get the equivalent RPC of a junos show command**](README.md#how-to-get-the-equivalent-rpc-of-a-junos-show-command)
