@@ -1,3 +1,11 @@
+'''
+Description: use this script to make a REST call to AWX in order to delete an AWX template (i.e to remove an Ansible playbook from AWX)
+'''
+'''
+Usage: 
+$ python AWX/delete_awx_templates.py 
+```
+
 import requests
 from requests.auth import HTTPBasicAuth
 
