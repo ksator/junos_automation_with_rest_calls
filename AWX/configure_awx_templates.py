@@ -1,3 +1,13 @@
+'''
+Usage: 
+$ python AWX/configure_awx_templates.py 
+run_pb.check.lldp.yml template has been created
+run_pb.check.bgp.yml template has been created
+run_pb.check.interfaces.yml template has been created
+run_pb.check.vlans.yml template has been created
+run_pb.check.lldp.json.yml template has been created
+'''
+
 import requests
 from requests.auth import HTTPBasicAuth
 import time
