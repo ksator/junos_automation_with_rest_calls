@@ -14,6 +14,7 @@
     - [**how to make REST calls with python**](README.md#how-to-make-rest-calls-with-python)
     - [**how to make REST calls with ansible**](README.md#how-to-make-rest-calls-with-ansible)
 - [**JUNOS SPACE REST API**](README.md#junos-space-rest-api)
+- [**AWX REST API**](README.md#awx-rest-api)
 - [**Looking for more Junos automation solutions**](README.md#looking-for-more-junos-automation-solutions)
 
 # What to find in this repository
@@ -254,18 +255,16 @@ session state for peer 192.168.1.1+179 is Established
 
 ### How to make REST calls with Ansible
 
-We can use Ansible to make rest calls. I am using the module uri. 
-
 The ansible inventory file is [**hosts**](hosts) at the root of the repository.  
 The ansible configuration file is [**ansible.cfg**](ansible.cfg) at the root of the repository.  
 Devices credentials are in a yaml file in the [**group_vars**](group_vars) directory  
 These playbooks have been tested using Ansible 2.4.2.0  
 
-The playbook [**pb_rest_call.yml**](ansible/pb_rest_call.yml) makes rest call to Junos devices and save the rpc output [**locally**](ansible). It also parses the rpc output and prints some details.  
+The playbook [**pb_rest_call.yml**](junos/pb_rest_call.yml) makes rest call to Junos devices and save the rpc output [**locally**](junos). It also parses the rpc output and prints some details.  
 
 
 ```
-$ ansible-playbook ansible/pb_rest_call.yml
+$ ansible-playbook junos/pb_rest_call.yml
 
 PLAY [make rest call to Junos devices, save and parse output] *************************************************************************************
 
@@ -298,18 +297,18 @@ dc-vmx-3                   : ok=4    changed=2    unreachable=0    failed=0
 dc-vmx-4                   : ok=4    changed=2    unreachable=0    failed=0
 ```
 ```
-$  ls ansible
+$  ls junos
 dc-vmx-3  dc-vmx-4  pb_rest_call.yml
 ```
 ```
-$  ls ansible/dc-vmx-3/
+$  ls junos/dc-vmx-3/
 rpc_output.json
 
 ```
 
-The playbook [**pb_rest_calls.yml**](ansible/pb_rest_calls.yml) makes several rest calls to several Junos devices and save the rpc output [**locally**](ansible). 
+The playbook [**pb_rest_calls.yml**](junos/pb_rest_calls.yml) makes several rest calls to several Junos devices and save the rpc output [**locally**](junos). 
 ```
-$ ansible-playbook ansible/pb_rest_calls.yml 
+$ ansible-playbook junos/pb_rest_calls.yml 
 
 PLAY [make rest calls to junos devices] **********************************************************************************************************************************
 
@@ -336,17 +335,41 @@ dc-vmx-3                   : ok=3    changed=1    unreachable=0    failed=0
 dc-vmx-4                   : ok=3    changed=1    unreachable=0    failed=0   
 ```
 ```
-$ ls ansible/dc-vmx-3/
+$ ls junos/dc-vmx-3/
 get-bgp-neighbor-information_output.json  get-software-information_output.json  rpc_output.json
 ```
 
 
 # JUNOS SPACE REST API
 
-We can use Python librairies to make REST calls. I am using the library requests.  
 The python scripts [**junos_space.py**](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space.  
 ```
 $ python junos_space/junos_space.py
+```
+
+# AWX REST API
+
+[**About AWX**](https://www.ansible.com/products/awx-project/faq)  
+[**AWX REST API guide**](http://docs.ansible.com/ansible-tower/2.3.0/html/towerapi/index.html)  
+
+The python scripts [**awx.py**](AWX/awx.py) uses the AWX REST API to execute an AWX template and to print the status.  
+
+Usage:
+``` 
+$ python AWX/awx.py <template_name>
+```
+Example: 
+```
+$ python AWX/awx.py wrong_name
+there is a problem with that template
+```
+Example: 
+```
+$ python AWX/awx.py valid_name
+waiting for the job to complete ... 
+still waiting for the job to complete ...
+still waiting for the job to complete ...
+status is successful
 ```
 
 # Looking for more Junos automation solutions
