@@ -1,13 +1,13 @@
 '''
 usage: 
-$ python AWX/awx.py <template_name>
+$ python AWX/run_awx_templates.py <template_name>
 
 example: 
-$ python AWX/awx.py wrong_name
+$ python AWX/run_awx_templates.py wrong_template_name
 there is a problem with that template
 
 example: 
-$ python AWX/awx.py valid_name
+$ python AWX/run_awx_templates.py valid_template_name
 waiting for the job to complete ... 
 still waiting for the job to complete ...
 still waiting for the job to complete ...
