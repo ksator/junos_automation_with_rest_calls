@@ -9,6 +9,12 @@ run_pb.check.bgp.yml template has been created
 run_pb.check.interfaces.yml template has been created
 run_pb.check.vlans.yml template has been created
 run_pb.check.lldp.json.yml template has been created
+run_pb.configure.golden.yml template has been created
+run_pb.configure.telemetry.yml template has been created
+run_pb.rollback.yml template has been created
+run_pb.print.facts.yml template has been created
+run_pb.check.all.yml template has been created
+run_pb.check.ports.availability.yml template has been created
 '''
 
 import requests
