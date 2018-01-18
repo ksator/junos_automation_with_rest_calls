@@ -1,4 +1,7 @@
 '''
+Description: use this script to make a REST call to AWX in order to run an AWX template (i.e an Ansible playbook)
+'''
+'''
 usage: 
 $ python AWX/run_awx_templates.py <template_name>
 
