@@ -390,6 +390,13 @@ Usage:
 $ python AWX/delete_awx_templates.py 
 ```
 
+The python scripts [**delete_awx_templates.py**](AWX/delete_awx_templates.py) makes REST calls to AWX in order to delete all AWX templates (i.e to remove all Ansible playbook from AWX)  
+Usage: 
+```
+$ python AWX/delete_awx_templates.py 
+```
+
+
 # Looking for more Junos automation solutions
 
 https://github.com/ksator?tab=repositories  
