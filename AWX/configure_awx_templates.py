@@ -42,7 +42,10 @@ for item in playbook_list:
      'verbosity': 0, 
      "extra_vars": '', 
      "skip_tags": '', 
-     "start_at_task": ''
+     "start_at_task": '',
+     "ask_limit_on_launch": True,
+     "ask_variables_on_launch": False,
+     "ask_verbosity_on_launch": True
  }
  rest_call = requests.post(url, headers=headers, auth=(authuser, authpwd), data=json.dumps(payload))
  # print rest_call.status_code

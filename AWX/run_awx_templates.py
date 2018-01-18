@@ -32,8 +32,12 @@ authpwd = 'password'
 headers = { 'content-type' : 'application/json' }
 # payload = {}
 payload = {
-  #   "limit": "QFX10K2-174",
-    "limit": ""
+#   "limit": "QFX10K2-174",
+    "limit": "",
+    "verbosity": 3,
+    "extra_vars": {
+       "rbid": 1
+    }
 }
 template_name = sys.argv[1]
 url = 'http://192.168.233.136/api/v2/job_templates/' + template_name + '/launch/'
