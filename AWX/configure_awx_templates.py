@@ -40,6 +40,6 @@ for item in playbook_list:
  if rest_call.status_code != 201: 
      print 'something went wrong with template for playbook ' + item
  else: 
-     print 'run_' + item + 'template has been created'
+     print 'run_' + item + ' template has been created'
  # print rest_call.json()
 
