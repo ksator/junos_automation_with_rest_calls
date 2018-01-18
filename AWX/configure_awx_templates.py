@@ -1,4 +1,7 @@
 '''
+Description: use this script to make a REST call to AWX in order to create AWX templates (i.e to add your Ansible playbooks to AWX)
+'''
+'''
 Usage: 
 $ python AWX/configure_awx_templates.py 
 run_pb.check.lldp.yml template has been created
