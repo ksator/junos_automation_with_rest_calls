@@ -49,8 +49,8 @@ We can use Ansible to make rest calls. I am using the module [**uri**](http://do
 
 ```
 sudo -s
-git clone https://github.com/ksator/rest_calls_to_juniper.git
-cd rest_calls_to_juniper/
+git clone https://github.com/ksator/rest_calls_to_junos.git
+cd rest_calls_to_junos/
 ls
 ```
 You can now use the local copy of this remote repository.  
