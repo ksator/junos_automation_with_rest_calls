@@ -13,7 +13,6 @@
     - [**how to make REST calls with curl**](README.md#how-to-make-rest-calls-with-curl)
     - [**how to make REST calls with python**](README.md#how-to-make-rest-calls-with-python)
     - [**how to make REST calls with ansible**](README.md#how-to-make-rest-calls-with-ansible)
-- [**AWX REST API**](README.md#awx-rest-api)
 - [**Looking for more Junos automation solutions**](README.md#looking-for-more-junos-automation-solutions)
 
 # What to find in this repository
