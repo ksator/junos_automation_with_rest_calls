@@ -49,7 +49,7 @@ We can use Ansible to make rest calls. I am using the module [**uri**](http://do
 
 ```
 sudo -s
-git clone https://junos_automation_with_rest_calls.git
+git clone https://github.com/ksator/junos_automation_with_rest_calls.git
 cd junos_automation_with_rest_calls
 ls
 ```
