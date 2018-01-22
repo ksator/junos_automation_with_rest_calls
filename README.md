@@ -18,7 +18,7 @@
 
 # What to find in this repository
 
-This repository has basic REST calls examples for various Juniper solutions.
+This repository has basic REST calls examples for Junos. 
 
 # About REST API
 
