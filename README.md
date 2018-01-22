@@ -27,7 +27,7 @@ Junos, Junos space, Contrail, Northstar, ... have REST API.
 You first need to get the REST API documentation for your system.   
 Then you can use a graphical REST Client (REST Easy, RESTClient, Postman, ...) to start playing with REST APIs and learn more about REST APIs.  
 
-Graphical REST clients are for humans, so if you need automation and programmatic access, you have to use other sort of REST clients. You can then use Python as a REST Client to handle REST Calls.  
+Graphical REST clients are for humans, so if you need automation and programmatic access, you have to use other sorts of REST clients. You can then use Python as a REST Client to handle REST Calls.  
 
 # REST calls with Python
 
@@ -46,7 +46,7 @@ longitude is 2.2806278
 We can use Ansible to make rest calls. I am using the module [**uri**](http://docs.ansible.com/ansible/latest/uri_module.html). 
 
 
-# How to get locally the content of the remote repository
+# How to get the content of the remote repository locally
 
 ```
 sudo -s
@@ -68,8 +68,8 @@ it is located [**here**](https://www.juniper.net/documentation/en_US/junos/infor
 
 ### How to get the equivalent RPC of a Junos show command?
 
-Each junos show command has an equivalent rpc.   
-To get the equivalent rpc of a Junos show command, add ```| display xml rpc``` at the end of the show command.  
+Each Junos show command has an equivalent RPC.   
+To get the equivalent RPC of a Junos show command, add ```| display xml rpc``` at the end of the show command.  
 
 ##### show command/RPC without argument
 
@@ -89,7 +89,7 @@ lab@spine-03> show version | display xml rpc
 
 ##### show command/RPC with arguments
 
-Some show commands use arguments, so the equivalents rpc require arguments:  
+Some show commands use arguments, so the equivalent rpc require arguments:  
 Run this command to get the equivalent rpc of ```show chassis hardware clei-models | display xml```. There is one argument in the rpc.
 ```
 pytraining@mx80-17> show chassis hardware clei-models | display xml rpc 
@@ -126,7 +126,7 @@ pytraining@newhostname> show route receive-protocol bgp 192.168.10.4 active-path
 ### How to enable REST API on Junos
 
 Run these commands to enable REST API on Junos. The default port is 3000.  
-The below commands enable also a graphical REST API Explorer that allow to conveniently experiment with REST APIs.  
+The below commands also enable a graphical REST API Explorer that allows to conveniently experiment with REST APIs.  
 ```
 lab@dc-vmx-3> show configuration system services rest | display set
 set system services rest http
@@ -156,11 +156,11 @@ lab@jedi-vmx-2-vcp> show version brief | display xml rpc
     </cli>
 </rpc-reply>
 ```
-In that case, we use an HTTP POST, despite it is only to read data. The default port is 3000, but I am using 8080 in this example.     
+In that case, we use an HTTP POST, despite it only being to read data. The default port is 3000, but I am using 8080 in this example.     
 ![rest_call_with_arguments.png](explorer/rest_call_with_args.png)
 
 ##### Junos REST API explorer usage: several RPC
-Here's how to use the Junos REST API explorer to make a REST call with several RPC. In that case, we use an HTTP POST, despite it is only to read data. The default port is 3000, but I am using 8080 in this example.       
+Here's how to use the Junos REST API explorer to make a REST call with several RPC. In this case, we use an HTTP POST, despite it is only to read data. The default port is 3000, but I am using 8080 in this example.       
 ![rest_call_with_several rpc.png](explorer/rest_call_with_several_rpc.png)  
 
 ##### Junos REST API explorer usage: RPC with filters
@@ -174,7 +174,7 @@ curl is an open source command line tool for transferring data.
 
 ##### curl usage with: one single RPC, no argument
 
-Run this command to retrieve and print the software information in a XML representation from an vMX router with a REST call. It's an HTTP GET. The rpc ```get-software-information``` is the equivalent of ```show version```. 
+Run this command to retrieve and print the software information in a XML representation from a vMX router with a REST call. It's an HTTP GET. The rpc ```get-software-information``` is the equivalent of ```show version```. 
 ```
 $ curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H "Content-Type: application/xml" -H "Accept: application/xml"
 ```
@@ -192,7 +192,7 @@ $ curl http://172.30.52.152:8080/rpc/get-software-information -u "lab:m0naco" -H
 ```
 ##### curl usage with: several RPC
 
-Run this command to make a REST call with several RPC. In that case, we use an HTTP POST, despite it is only to read data. The list of RPC is ```get-bgp-neighbor-information``` and ```get-software-information```. The default port is 3000, but I am using 8080 in this example.  
+Run this command to make a REST call with several RPC. In this case, we use an HTTP POST, despite it only being to read data. The list of RPC is ```get-bgp-neighbor-information``` and ```get-software-information```. The default port is 3000, but I am using 8080 in this example.  
 ```
 $ curl http://172.30.52.152:8080/rpc?stop-on-error=1 -u "lab:m0naco" -H "Content-Type: plain/text" -H "Accept: application/xml" -d "<get-bgp-neighbor-information/> <get-software-information/>"
 ```
@@ -208,7 +208,7 @@ $ curl http://172.30.52.152:8080/rpc/ -u "lab:m0naco" -H "Content-Type: applicat
 
 We can use Python librairies to make REST calls. I am using the library requests.  
 
-[**get_software_information_in_xml.py**](junos/get_software_information_in_xml.py) retrieves and print the software information in a XML representation from an vMX router with a REST call. It uses the HTTP method GET, with the RPC ```get-software-information``` and no argument. 
+[**get_software_information_in_xml.py**](junos/get_software_information_in_xml.py) retrieves and prints the software information in a XML representation from an vMX router with a REST call. It uses the HTTP method GET, with the RPC ```get-software-information``` and no argument. 
 ```
 $ python junos/get_software_information_in_xml.py
 ```
@@ -221,7 +221,7 @@ Host-name: dc-vmx-3
 Product name: vmx
 ```
 
-[**get_configuration_with_filter.py**](junos/get_configuration_with_filter.py) script retrieves and print a subset of the Junos configuration from an MX router with a REST API call. It uses a filter to retrieves only a subset of the Junos configuration. It uses the HTTP method POST. 
+[**get_configuration_with_filter.py**](junos/get_configuration_with_filter.py) script retrieves and print a subset of the Junos configuration from an MX router with a REST API call. It uses a filter to retrieve only a subset of the Junos configuration. It uses the HTTP method POST. 
 ```
 $ python junos/get_configuration_with_filter.py
 ```
@@ -260,7 +260,7 @@ The ansible configuration file is [**ansible.cfg**](ansible.cfg) at the root of 
 Devices credentials are in a yaml file in the [**group_vars**](group_vars) directory  
 These playbooks have been tested using Ansible 2.4.2.0  
 
-The playbook [**pb_rest_call.yml**](junos/pb_rest_call.yml) makes rest call to Junos devices and save the rpc output [**locally**](junos). It also parses the rpc output and prints some details.  
+The playbook [**pb_rest_call.yml**](junos/pb_rest_call.yml) makes rest call to Junos devices and saves the rpc output [**locally**](junos). It also parses the rpc output and prints some details.  
 
 
 ```
@@ -306,7 +306,7 @@ rpc_output.json
 
 ```
 
-The playbook [**pb_rest_calls.yml**](junos/pb_rest_calls.yml) makes several rest calls to several Junos devices and save the rpc output [**locally**](junos). 
+The playbook [**pb_rest_calls.yml**](junos/pb_rest_calls.yml) makes several rest calls to several Junos devices and saves the rpc output [**locally**](junos). 
 ```
 $ ansible-playbook junos/pb_rest_calls.yml 
 
@@ -352,7 +352,7 @@ $ python junos_space/junos_space.py
 [**About AWX**](https://www.ansible.com/products/awx-project/faq)  
 [**AWX REST API guide**](http://docs.ansible.com/ansible-tower/2.3.0/html/towerapi/index.html)  
 
-The python scripts [**configure_awx_templates.py**](AWX/configure_awx_templates.py) make a REST calls to AWX in order to create AWX templates (i.e to add your Ansible playbooks to AWX)  
+The python scripts [**configure_awx_templates.py**](AWX/configure_awx_templates.py) make a REST call to AWX in order to create AWX templates (i.e to add your Ansible playbooks to AWX)  
 Usage: 
 ```
 $ python AWX/configure_awx_templates.py 
@@ -384,7 +384,7 @@ status is successful
 ```
 
 
-The python scripts [**delete_awx_template.py**](AWX/delete_awx_template.py) makes a REST call to AWX in order to delete an AWX template (i.e to remove an Ansible playbook from AWX)  
+The python scripts [**delete_awx_template.py**](AWX/delete_awx_template.py) make a REST call to AWX in order to delete an AWX template (i.e to remove an Ansible playbook from AWX)  
 Usage: 
 ```
 $ python AWX/delete_awx_templates.py 
