@@ -13,7 +13,6 @@
     - [**how to make REST calls with curl**](README.md#how-to-make-rest-calls-with-curl)
     - [**how to make REST calls with python**](README.md#how-to-make-rest-calls-with-python)
     - [**how to make REST calls with ansible**](README.md#how-to-make-rest-calls-with-ansible)
-- [**JUNOS SPACE REST API**](README.md#junos-space-rest-api)
 - [**AWX REST API**](README.md#awx-rest-api)
 - [**Looking for more Junos automation solutions**](README.md#looking-for-more-junos-automation-solutions)
 
@@ -339,13 +338,6 @@ $ ls junos/dc-vmx-3/
 get-bgp-neighbor-information_output.json  get-software-information_output.json  rpc_output.json
 ```
 
-
-# JUNOS SPACE REST API
-
-The python scripts [**junos_space.py**](junos_space/junos_space.py) extracts and prints the ip addresses of all EX4300-48T from junos space.  
-```
-$ python junos_space/junos_space.py
-```
 
 # AWX REST API
 
