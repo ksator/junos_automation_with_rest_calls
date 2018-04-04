@@ -1,4 +1,4 @@
-# Repository documentation structure
+# repository documentation structure
 
 - [**What to find in this repository**](README.md#what-to-find-in-this-repository)
 - [**About REST API**](README.md#about-rest-api)
